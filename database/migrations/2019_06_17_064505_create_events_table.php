@@ -17,7 +17,7 @@ class CreateEventsTable extends Migration
             $table->bigIncrements('id');
             $table->string('jeu');
             $table->date('date'); // DATE : stocke une date au format AAAA-MM-JJ (Année-Mois-Jour)
-            $table->time('horaire_debut');
+            $table->time('horaire_debut'); // TIME -> format hh:mm:ss
             $table->string('duree')->nullable();
             $table->string('lieu');
             $table->integer('nb_place');

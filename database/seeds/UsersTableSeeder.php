@@ -19,9 +19,12 @@ class UsersTableSeeder extends Seeder
         //dd($role_admin, $role_user);
 
         $user = new User;
-        $user->name = "Admin";
+        $user->firstname = "Admin";
+        $user->lastname = "Admin";
         $user->email = "admin@mail.com";
         $user->password = '$2y$10$pzWLzd/d4j3UIrs3n7SThOXeszVdep.j/cf2XvqmCuOq.1Jty/LBq';
+        $user->phone = "0692010203";
+        $user->pseudo = "Admin";
         $user->save();
         $user->roles()->attach($role_admin->id);
     }
