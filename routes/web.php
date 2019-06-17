@@ -15,13 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route:: get ('/welcome', 'HomeController@home');
-
-Route::get('/events', 'HomeController@events');
-
-Route::get('/suggestions', 'HomeController@suggest');
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
