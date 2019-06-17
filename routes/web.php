@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/suggestions', 'SuggestionsController@form_suggestions');
+
+Route::post('/suggestions/create', 'SuggestionsController@store_suggestion');
