@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Event;
+use App\User;
 
 class EventsTableSeeder extends Seeder
 {
