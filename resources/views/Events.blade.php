@@ -5,7 +5,7 @@
 <div clas="container">
     <div class="text-center text-justify">
 
-        <h2> Nos Evènements </h2>
+        <h2> Nos Tournois</h2>
 
     </div>
     <div class="liste">
