@@ -15,18 +15,16 @@ class CreateEventsTable extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->bigIncrements('id');
-
-            $table->string('titre');
-            $table->integer('date');
+            $table->string('jeu');
+            $table->date('date'); // DATE : stocke une date au format AAAA-MM-JJ (Année-Mois-Jour)
             $table->integer('horaire_debut');
-            $table->integer('duree');
+            $table->string('duree')->nullable();
             $table->string('lieu');
             $table->integer('nb_place');
-            $table->integer('nb_place_reserve');
-            $table->integer('fin_inscription');
-            $table->string('recompense');
-            $table->integer('prix');
-            $table->string('name');
+            $table->integer('nb_place_reserve')->nullable();
+            $table->string('fin_inscription')->nullable();
+            $table->string('recompense')->nullable();
+            $table->integer('prix')->nullable();
     
             $table->timestamps();
         });
