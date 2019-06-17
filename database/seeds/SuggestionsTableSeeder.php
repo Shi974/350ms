@@ -16,7 +16,8 @@ class SuggestionsTableSeeder extends Seeder
         $suggestion = new Suggestion;
         $suggestion->id = 1;
         $suggestion->user_id = 1;
-        $suggestion->message = "Je suis un message";
+        $suggestion->titre = "Titre du message";
+        $suggestion->message = "Je suis un message. Bip bip Boop BooOp Bo0p !";
         $suggestion->save();
     }
 }
