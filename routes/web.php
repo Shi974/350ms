@@ -15,13 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/profil', function () {
+    return view('profil');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/events', function (){
-    return view('events');
-});
+Route::get('/events', 'EventsController@indexEvent');
 
 // PAGE EVÈNEMENTS - CRUD
 Route::get('/admin/events', 'EventsController@indexAllEvents');

@@ -41,30 +41,51 @@
                     <a class="nav-link font-weight-bold" style="font-size: 20px;" href="events">Evènements</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="formulaire-suggestions">Suggestions</a>
+                    <a class="nav-link font-weight-bold" style="font-size: 20px;"
+                        href="formulaire-suggestions">Suggestions</a>
                 </li>
             </ul>
 
             <ul class="navbar-nav ml-auto">
-
-
-                <li class="nav-item">
-                    <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold" style="font-size: 20px;"
-                            href="login">Se connecter</a>
-                    </button>
-                </li>
+                @guest
 
                 <li class="nav-item">
-                    <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold" style="font-size: 20px;"
-                            href="register">S'enregistrer</a>
+                    <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold"
+                            style="font-size: 20px;" href="login">Se connecter</a>
                     </button>
                 </li>
+                @if (Route::has('register'))
 
                 <li class="nav-item">
-                    <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold" style="font-size: 20px;"
-                            href="profil">Profil</a>
+                    <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold"
+                            style="font-size: 20px;" href="register">S'enregistrer</a>
                     </button>
                 </li>
+                @endif
+                @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle " style="font-size:25px" href="#"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> <i
+                            class="fas fa-user"></i>
+                        {{ Auth::user()->pseudo }} <span class="caret"></span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" style="font-size:20px" href="profil">
+                            {{ __('Accéder à votre profil') }}
+                        </a>
+                        <a class="dropdown-item" style="font-size:20px" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Se déconnecter') }}
+                        </a>
+
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+                @endguest
             </ul>
 
         </nav>
@@ -94,14 +115,14 @@
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-</script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
 </body>
 
