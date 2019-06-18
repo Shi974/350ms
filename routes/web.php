@@ -46,23 +46,24 @@ Route::get('/admin/events/delete/{id}', 'EventsController@destroy');
 // ---------------------------------------
 
 //SUGGESTIONS - CRUD
+
 //FORMULAIRE
 Route::get('/formulaire-suggestions', 'SuggestionsController@form');
+
 //CREATE
 Route::post('/suggestions/create', 'SuggestionsController@store');
+
 //READ ( ADMIN )
 Route::get('/suggestions', 'SuggestionsController@read');
+
 //UPDATE ???
+
 //DELETE ( ADMIN )
 Route::get('/suggestions/destroy/{id}', 'SuggestionsController@destroy');
-<<<<<<< HEAD
-// FIN CRUD ------------------------------
+
+// ------------------------------
 
 
 
 Route::post('/ajout_avatar', 'ProfilController@ajoutAvatar');
 
-=======
-
-// ---------------------------------------
->>>>>>> 669ce889e326d5a2c79fd4dba0f742d8530df69f
