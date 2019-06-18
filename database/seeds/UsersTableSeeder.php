@@ -33,19 +33,19 @@ class UsersTableSeeder extends Seeder
         $user->firstname = "Joséphine";
         $user->lastname = "Ange";
         $user->email = "jo@mail.com";
-        $user->password = 'josephine';
+        $user->password = '$2y$10$FxnOB5NzRj/62oeCVJZ93OHE2xAvVhmzvXqlaomej/VqBpb43qjMy';
         $user->phone = "0692010204";
         $user->pseudo = "Jo974";
         $user->save();
         $user->roles()->attach($role_user->id);
 
         $user = new User;
-        $user->firstname = "Sandra";
-        $user->lastname = "Payet";
-        $user->email = "sandra@mail.com";
-        $user->password = 'sandra';
+        $user->firstname = "Charles";
+        $user->lastname = "Atan";
+        $user->email = "chacha@mail.com";
+        $user->password = '$2y$10$u.rDmNnBIl/jRI1B45pl8OJwiGvwzmwnaTs5j2dQGL9gCpFAJD.Qi';
         $user->phone = "0692010205";
-        $user->pseudo = "sandy";
+        $user->pseudo = "charly";
         $user->save();
         $user->roles()->attach($role_user->id);
 
@@ -53,7 +53,7 @@ class UsersTableSeeder extends Seeder
         $user->firstname = "Paul";
         $user->lastname = "Hemic";
         $user->email = "paul@mail.com";
-        $user->password = 'paul';
+        $user->password = '$2y$10$Bk38RG1lf5dSKvt74DkEJeOA99Jz07INv1u/5MhFextiao9nG6d3e';
         $user->phone = "0692010206";
         $user->pseudo = "Pol_his";
         $user->save();
