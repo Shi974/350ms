@@ -65,8 +65,8 @@
                 @else
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle " style="font-size:25px" href="#"
-                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> <i
-                            class="fas fa-user"></i>
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> <i class="fas fa-gamepad"></i>
+
                         {{ Auth::user()->pseudo }} <span class="caret"></span>
                     </a>
 

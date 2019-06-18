@@ -17,7 +17,7 @@
 
                 <div class="d-flex flex-row justify-content-aroun w-100">
                     <figure style="width:20%" class="w-25">
-                        <img src="/images/rl.png" alt="" title="" />
+                        <img src="/images/{{ $event->image }}" alt="" title="" />
                     </figure>
                     <span class="w-75">
                         Horaire: {{$event->horaire_debut}} <br />
