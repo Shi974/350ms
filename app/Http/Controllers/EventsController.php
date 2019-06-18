@@ -12,4 +12,13 @@ class EventsController extends Controller
         $events = Event::all();
         return view('admin.events_crud', ['events' => $events]);
     }
+
+
+    //RETRIEVE DE TOUS LES EVENTS - USERS
+
+    public function indexEvent(){
+
+        $events = Event::all();
+        return view('events', ['events' => $events]);
+    }
 }
