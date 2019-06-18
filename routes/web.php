@@ -21,3 +21,4 @@ Route::get('/Events', 'HomeController@events');
 
 Route::get('/suggestions', 'HomeController@suggest');
 
+Route::get('/profil_update', 'ShowProfileController@profil');
