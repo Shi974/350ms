@@ -20,45 +20,47 @@
     <header>
         <div class="banner d-flex flex-row align-items-center">
             <img src="/images/logo.png" class="logo" alt="logo">
-
             <div class="title font-weight-bold">
                 <h1> 350ms Klub </h1>
                 <h2> by Gamers da Kour</h2>
             </div>
-
         </div>
 
         <nav class="navbar navbar-expand-lg">
 
-
-
             <ul class="navbar-nav mr-auto">
-
                 <li class="nav-item active">
                     <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/">Accueil </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="events">Evènements</a>
+                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/events">Evènements</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link font-weight-bold" style="font-size: 20px;"
-                        href="formulaire-suggestions">Suggestions</a>
+                        href="/formulaire-suggestions">Suggestions</a>
                 </li>
             </ul>
 
             <ul class="navbar-nav ml-auto">
-                @guest
+            @auth
+                @if (Auth::User() -> hasRole("Admin"))
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold" style="font-size: 20px;"
+                        href="/admin/events">Gérer évènements</a>
+                    </li>
+                @endif
+            @endauth
 
+            @guest
                 <li class="nav-item">
-                    <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold"
-                            style="font-size: 20px;" href="login">Se connecter</a>
+                    <button type="button" class="btn btn-outline-primary">
+                        <a class="font-weight-bold" style="font-size: 20px;" href="/login">Se connecter</a>
                     </button>
                 </li>
                 @if (Route::has('register'))
-
                 <li class="nav-item">
-                    <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold"
-                            style="font-size: 20px;" href="register">S'enregistrer</a>
+                    <button type="button" class="btn btn-outline-primary">
+                        <a class="font-weight-bold" style="font-size: 20px;" href="/register">S'enregistrer</a>
                     </button>
                 </li>
                 @endif
@@ -66,10 +68,8 @@
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle " style="font-size:25px" href="#"
                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> <i class="fas fa-gamepad"></i>
-
                         {{ Auth::user()->pseudo }} <span class="caret"></span>
                     </a>
-
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" style="font-size:20px" href="profil">
                             {{ __('Accéder à votre profil') }}
@@ -78,7 +78,6 @@
                                                      document.getElementById('logout-form').submit();">
                             {{ __('Se déconnecter') }}
                         </a>
-
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
@@ -89,30 +88,15 @@
             </ul>
 
         </nav>
-
-
     </header>
-
-
-
-
-
 
 
     @yield('content')
 
 
-
-
-
-
-
     <footer>
-        <p>mentions légales : © Copyright 2019 GDK Enterprise </p>
-
-
+        <p>Mentions Légales : © Copyright 2019 GDK Enterprise </p>
     </footer>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
