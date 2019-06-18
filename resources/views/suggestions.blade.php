@@ -10,26 +10,16 @@
                 <div class="card-header">{{ __("Faites vos suggestions") }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="/suggestions/create">
+                    @csrf
+                        <div class="form-group">
+                            <label for="titre">Objet de la Suggestion</label>
+                            <input type="text" class="form-control" id="titre" name="titre">
+                        </div>
                         <div class="formgroup">
-                            <label for="Inputsuggestion">Votre suggestion</label>
-                            <textarea class=form-control id="InputText"> </textarea>
+                            <label for="message">Votre suggestion</label>
+                            <textarea class=form-control id="message" name="message"></textarea>
                         </div>
-
-
-                        <div class="form-group">
-                            <label for="InputPseudo">Pseudo</label>
-                            <input type="password" class="form-control" id="InputPseudo" placeholder="Pseudo">
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="InputEmail1">Email</label>
-                            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"
-                                placeholder="Email">
-                            <small id="emailHelp" class="form-text text-muted">Votre adresse e-mail ne sera communiquée à quiconque .</small>
-                        </div>
-
                         <button type="submit" class="btn btn-outline-primary">Envoyer</button>
                         <button type="reset" class="btn btn-outline-danger">Effacer </button>
                     </form>
