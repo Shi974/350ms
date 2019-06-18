@@ -3,30 +3,37 @@
 @section('content')
 
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">{{ __("Faites vos suggestions") }}</div>
+<hr>
 
-                <div class="card-body">
-                    <form method="POST" action="/suggestions/create">
-                    @csrf
-                        <div class="form-group">
-                            <label for="titre">Objet de la Suggestion</label>
-                            <input type="text" class="form-control" id="titre" name="titre">
-                        </div>
-                        <div class="formgroup">
-                            <label for="message">Votre suggestion</label>
-                            <textarea class=form-control id="message" name="message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-outline-primary">Envoyer</button>
-                        <button type="reset" class="btn btn-outline-danger">Effacer </button>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
+<div class="container-fluid">
+<hr>
+    <table class="table table-bordered table-dark">
+        <thead class="text-center">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Auteur</th>
+                <th scope="col">Titre</th>
+                <th scope="col">Message</th>
+                <th scope="col">Modification</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($suggestions as $suggestion)
+                <tr>
+                    <th scope="row">{{ $suggestion->id}}</th>
+                    <td class="text-center"> {{$suggestion->user->firstname }} </td>
+                    <td class="text-center"> {{$suggestion->titre }} </td>
+                    <td class="text-center"> {{$suggestion->message}} </td>
+                    <td class="text-center">
+                        <a href="/suggestions/destroy/{{ $suggestion->id }}" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette suggestion ?')">
+                            <button type="button" class="btn btn-danger">Supprimer</button>
+                        </a>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>
+
+<hr>
 @endsection
