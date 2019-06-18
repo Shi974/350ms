@@ -11,8 +11,7 @@
 |
 */
 
-
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -24,10 +23,10 @@ Route::get('/events', function (){
     return view('events');
 });
 
-Route::get('/suggestions', function (){
-    return view('suggestions');
+// PAGE EVÈNEMENTS - CRUD
+Route::get('/admin/events', 'EventsController@indexAllEvents');
 
-});
+// PAGE SUGGESTIONS - CRUD
 Route::get('/suggestions', 'SuggestionsController@form_suggestions');
 
 Route::post('/suggestions/create', 'SuggestionsController@store_suggestion');
