@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -20,17 +20,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-<<<<<<< HEAD
 Route::get('/events', function (){
     return view('events');
 });
 
-Route::get('/suggestions', function (){
-    return view('suggestions');
-
-});
-=======
+// PAGE SUGGESTIONS - CRUD
 Route::get('/suggestions', 'SuggestionsController@form_suggestions');
 
 Route::post('/suggestions/create', 'SuggestionsController@store_suggestion');
->>>>>>> 5ccec07d90a058a51857e7e98704e8fa658297c6

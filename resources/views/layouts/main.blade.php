@@ -15,98 +15,6 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
 </head>
-<!-- <style>
-    .banner {
-
-        /* border: 2px solid #ea0001; */
-        width: 100%;
-        height: 20%;
-        background-image: url("/images/bg.jpg");
-        background-position: center;
-
-    }
-
-    .logo {
-        width: 5%;
-        height: 35%;
-    }
-
-    h1 {
-        font-family: 'Comfortaa', cursive;
-        font-size: 60px;
-        color: #0972c9;
-    }
-
-    h2 {
-        font-family: 'Comfortaa', cursive;
-        font-size: 35px;
-        color: #ea0001;
-    }
-
-    h3 {
-        font-family: 'Comfortaa', cursive;
-        color: #ea0001;
-
-    }
-
-    .intro {
-        font-family: 'Comfortaa', cursive;
-    }
-
-    nav {
-
-        background-color: #000000;
-
-    }
-
-    .nav-link {
-        font-family: 'Comfortaa', cursive;
-        color: #0972c9 !important;
-
-    }
-
-    .nav-item {
-        font-family: 'Comfortaa', cursive;
-        color: #0972c9 !important;
-    }
-
-    .navbar {
-        color: #000000;
-    }
-
-
-    .liste {
-        font-family: 'Comfortaa', cursive;
-        color: #ea0001;
-        font-size: 25px;
-    }
-
-    .container{
-        padding-top: 50px;
-    }
-
-    .card{
-        background-color: #000000;
-        color:#ea0001 !important;
-    }
-
-    .card-header{
-        font-size:25px;
-
-    }
-
-    footer {
-        width: 100%;
-        height: 10%; 
-        background-color: #000000;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        font-family: 'Comfortaa', cursive;
-        color: #0972c9;
-    }
-
-</style> -->
 
 <body>
     <header>
@@ -127,7 +35,7 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="welcome">Accueil </a>
+                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/">Accueil </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link font-weight-bold" style="font-size: 20px;" href="events">Evènements</a>
