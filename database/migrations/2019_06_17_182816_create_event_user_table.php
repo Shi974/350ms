@@ -13,7 +13,8 @@ class CreateEventUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('event_user', function (Blueprint $table) {
+        // SI CETTE TABLE PLANTE AU SEED, RECREER TABLE + MODEL AVEC USERS PLURIEL
+        Schema::create('event_users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
             $table->integer('event_id');
@@ -28,6 +29,6 @@ class CreateEventUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('event_user');
+        Schema::dropIfExists('event_users');
     }
 }
