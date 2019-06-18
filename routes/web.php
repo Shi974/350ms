@@ -44,3 +44,8 @@ Route::get('/suggestions', 'SuggestionsController@read');
 //DELETE ( ADMIN )
 Route::get('/suggestions/destroy/{id}', 'SuggestionsController@destroy');
 // FIN CRUD ------------------------------
+
+
+
+Route::post('/ajout_avatar', 'ProfilController@ajoutAvatar');
+
