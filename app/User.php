@@ -17,6 +17,11 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Role');
     }
 
+    // LIER MODÈLE USER AU MODÈLE EVENT
+    public function events() {
+        return $this->belongsToMany('App\Event');
+    }
+
     // ATTACHER LES RÔLES AUTOMATIQUEMENT AU -SEED
     public function attach($role) {
         return $this->roles()->save($role);
