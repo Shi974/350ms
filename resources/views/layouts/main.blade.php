@@ -38,11 +38,11 @@
                     <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/">Accueil </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="events">Evènements</a>
+                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/events">Evènements</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link font-weight-bold" style="font-size: 20px;"
-                        href="formulaire-suggestions">Suggestions</a>
+                        href="/formulaire-suggestions">Suggestions</a>
                 </li>
             </ul>
 
@@ -51,14 +51,14 @@
 
                 <li class="nav-item">
                     <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold"
-                            style="font-size: 20px;" href="login">Se connecter</a>
+                            style="font-size: 20px;" href="/login">Se connecter</a>
                     </button>
                 </li>
                 @if (Route::has('register'))
 
                 <li class="nav-item">
                     <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold"
-                            style="font-size: 20px;" href="register">S'enregistrer</a>
+                            style="font-size: 20px;" href="/register">S'enregistrer</a>
                     </button>
                 </li>
                 @endif
