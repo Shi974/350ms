@@ -47,7 +47,7 @@ class UsersTableSeeder extends Seeder
         $user->phone = "0692010205";
         $user->pseudo = "sandy";
         $user->save();
-        $user->roles()->attach($role_admin->id);
+        $user->roles()->attach($role_user->id);
 
         $user = new User;
         $user->firstname = "Paul";
@@ -57,6 +57,6 @@ class UsersTableSeeder extends Seeder
         $user->phone = "0692010206";
         $user->pseudo = "Pol_his";
         $user->save();
-        $user->roles()->attach($role_admin->id);
+        $user->roles()->attach($role_user->id);
     }
 }
