@@ -43,5 +43,12 @@ class EventsController extends Controller
 
         $event->save();
         return redirect()->action("EventsController@indexAllEvents");
+
+    //RETRIEVE DE TOUS LES EVENTS - USERS
+
+    public function indexEvent(){
+
+        $events = Event::all();
+        return view('events', ['events' => $events]);
     }
 }
