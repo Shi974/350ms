@@ -15,8 +15,8 @@
                             <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('Prenom') }}</label>
 
                             <div class="col-md-6">
-                                <input id="fistname" type="text" class="form-control @error('firstname') is-invalid @enderror"
-                                    name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus>
+                                <input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror"
+                                    name="firstname" autofocus>
 
                                 @error('firstname')
                                 <span class="invalid-feedback" role="alert">
@@ -50,11 +50,11 @@
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                                     name="email" value="{{ old('email') }}" required autocomplete="email">
 
-                                @error('email')
+                                <!-- @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                                @enderror
+                                @enderror -->
                             </div>
                         </div>
 
@@ -82,7 +82,7 @@
 
                             <div class="col-md-6">
                                 <input id="pseudo" type="text" class="form-control @error('pseudo') is-invalid @enderror"
-                                    name="email" value="{{ old('pseudo') }}" required autocomplete="pseudo">
+                                    name="pseudo" value="{{ old('pseudo') }}" required autocomplete="pseudo">
 
                                 @error('pseudo')
                                 <span class="invalid-feedback" role="alert">
@@ -120,8 +120,8 @@
                         </div>
 
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
+                        <!-- <div class="form-group row">
+                            <label for="avatar" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
 
                             <div class="col-md-6">
                                 <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
@@ -133,7 +133,7 @@
                                 </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
