@@ -41,7 +41,7 @@
                     <a class="nav-link font-weight-bold" style="font-size: 20px;" href="events">Evènements</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="suggestions">Suggestions</a>
+                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="formulaire-suggestions">Suggestions</a>
                 </li>
             </ul>
 

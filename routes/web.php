@@ -27,7 +27,14 @@ Route::get('/events', function (){
 // PAGE EVÈNEMENTS - CRUD
 Route::get('/admin/events', 'EventsController@indexAllEvents');
 
-// PAGE SUGGESTIONS - CRUD
-Route::get('/suggestions', 'SuggestionsController@form_suggestions');
-
-Route::post('/suggestions/create', 'SuggestionsController@store_suggestion');
+//SUGGESTIONS - CRUD ---------------------
+//FORMULAIRE
+Route::get('/formulaire-suggestions', 'SuggestionsController@form');
+//CREATE
+Route::post('/suggestions/create', 'SuggestionsController@store');
+//READ ( ADMIN )
+Route::get('/suggestions', 'SuggestionsController@read');
+//UPDATE ???
+//DELETE ( ADMIN )
+Route::get('/suggestions/destroy/{id}', 'SuggestionsController@destroy');
+// FIN CRUD ------------------------------

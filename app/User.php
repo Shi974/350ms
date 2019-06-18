@@ -10,6 +10,10 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function suggestions(){
+        return $this->hasMany("App\Suggestion");
+    }
+
     // ______ MODIFICATIONS ROLES ______
 
     // LIER LE MODÈLE USER AU MODÈLE ROLE
