@@ -24,6 +24,9 @@ Route::get('/events', function (){
     return view('events');
 });
 
+// PAGE EVÈNEMENTS - CRUD
+Route::get('/admin/events', 'EventsController@indexAllEvents');
+
 // PAGE SUGGESTIONS - CRUD
 Route::get('/suggestions', 'SuggestionsController@form_suggestions');
 
