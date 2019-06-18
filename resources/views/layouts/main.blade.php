@@ -60,6 +60,11 @@
                     </button>
                 </li>
 
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold" style="font-size: 20px;"
+                            href="profil">Profil</a>
+                    </button>
+                </li>
             </ul>
 
         </nav>
