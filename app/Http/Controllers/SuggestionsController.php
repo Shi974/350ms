@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Suggestion;
 
 class SuggestionsController extends Controller
@@ -15,16 +17,19 @@ class SuggestionsController extends Controller
     }
     // CREATE SUGGESTION -----------------------------
     public function store_suggestion(Request $request){
-        dd($request->all());
+        //dd($request->all());
+        //dd(Auth::user()->id);
         $suggestion = new Suggestion;
         $request->validate([
             "titre"=> "required",
             "message"=>"required|max:500",
         ]);
+        $auth = Auth::user()->id;   // On récupère l'id de la personne connecté
         $suggestion->titre = $request->titre;
+        $suggestion->user_id = $auth;    // On place l'id dans le user_id
         $suggestion->message = $request->message;
         $suggestion->save();
-        //return redirect()->action("ProductController@indexall");
+        // Ne plas oublier de return vers une page validation du formulaire
     }
     // FIN CREATE SUGGESTION --------------------------
     // ----------------------------- FIN CRUD SUGGESTIONS -----------------------------
