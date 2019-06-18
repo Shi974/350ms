@@ -7,7 +7,7 @@
 
     <title>350ms Klub</title>
 
-    <link rel="stylesheet" type="text/css" href="public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,10 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
 </head>
-<style>
+<!-- <style>
     .banner {
 
-        border: 2px solid #ea0001;
+        /* border: 2px solid #ea0001; */
         width: 100%;
         height: 20%;
         background-image: url("/images/bg.jpg");
@@ -34,7 +34,7 @@
     h1 {
         font-family: 'Comfortaa', cursive;
         font-size: 60px;
-        color:  #0972c9;
+        color: #0972c9;
     }
 
     h2 {
@@ -59,106 +59,137 @@
 
     }
 
-    .nav-link{
+    .nav-link {
         font-family: 'Comfortaa', cursive;
-        color: #0972c9 !important; 
+        color: #0972c9 !important;
 
     }
 
-    .nav-item{
+    .nav-item {
         font-family: 'Comfortaa', cursive;
-        color: #0972c9 !important; 
+        color: #0972c9 !important;
     }
-    .navbar{
-       color: #000000;
+
+    .navbar {
+        color: #000000;
     }
 
 
-    .liste{
+    .liste {
         font-family: 'Comfortaa', cursive;
         color: #ea0001;
         font-size: 25px;
     }
 
-    
-    footer{
-        width: 100%;
-        height: 10%;
+    .container{
+        padding-top: 50px;
+    }
+
+    .card{
         background-color: #000000;
-        position: fixed;
+        color:#ea0001 !important;
+    }
+
+    .card-header{
+        font-size:25px;
+
+    }
+
+    footer {
+        width: 100%;
+        height: 10%; 
+        background-color: #000000;
+        position: absolute;
         left: 0;
         bottom: 0;
         font-family: 'Comfortaa', cursive;
-        color:#0972c9;
+        color: #0972c9;
     }
 
-</style>
-
-<header>
-    <div class="banner d-flex flex-row align-items-center">
-        <img src="/images/logo.png" class="logo" alt="logo">
-
-        <div class="title font-weight-bold">
-            <h1> 350ms Klub </h1>
-            <h2> by Gamers da Kour</h2>
-        </div>
-
-    </div>
-
-    <nav class="navbar navbar-expand-lg">
-
-
-
-        <ul class="navbar-nav mr-auto">
-
-            <li class="nav-item active">
-                <a class="nav-link font-weight-bold" style="font-size: 20px;" href="welcome">Accueil </a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link font-weight-bold" style="font-size: 20px;" href="events">Evènements</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link font-weight-bold" style="font-size: 20px;" href="suggestions">Suggestions</a>
-            </li>
-        </ul>
-
-        <ul class="navbar-nav ml-auto">
-
-
-            <li class="nav-item">
-                <button type="button" class="btn"> <a class="font-weight-bold" style="font-size: 20px;"
-                        href="login">Se connecter</a></button>
-            </li>
-
-            <li class="nav-item">
-                <button type="button" class="btn"> <a class="font-weight-bold" style="font-size: 20px;"
-                        href="register">S'enregistrer</a></button>
-            </li>
-
-        </ul>
-
-    </nav>
-
-
-</header>
-
-
+</style> -->
 
 <body>
+    <header>
+        <div class="banner d-flex flex-row align-items-center">
+            <img src="/images/logo.png" class="logo" alt="logo">
+
+            <div class="title font-weight-bold">
+                <h1> 350ms Klub </h1>
+                <h2> by Gamers da Kour</h2>
+            </div>
+
+        </div>
+
+        <nav class="navbar navbar-expand-lg">
+
+
+
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="welcome">Accueil </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="events">Evènements</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="suggestions">Suggestions</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+
+
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold" style="font-size: 20px;"
+                            href="login">Se connecter</a>
+                    </button>
+                </li>
+
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-primary"> <a class="font-weight-bold" style="font-size: 20px;"
+                            href="register">S'enregistrer</a>
+                    </button>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+    </header>
+
+
+
+
 
 
 
     @yield('content')
 
+
+
+
+
+
+
+    <footer>
+        <p>mentions légales : © Copyright 2019 GDK Enterprise </p>
+
+
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
 </body>
 
-
-
-
-
-<footer>
-<p>mentions légales : © Copyright 2019 GDK Enterprise </p>
-
-
-</footer>
 </html>
