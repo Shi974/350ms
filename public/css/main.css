@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #000000 !important;
 }
 
@@ -71,27 +71,25 @@ nav {
     font-size: 25px;
 }
 
-.container{
+.container {
     padding-top: 50px;
 }
 
-.card{
+.card {
     background-color: #000000 !important;
     color:#0972c9 !important;
 }
 
-.card-header{
+.card-header {
     font-size:25px;
 
 }
 
-.btn-outline-danger{
+.btn-outline-danger {
 border-color:  #ea0001 !important;
 color:#ea0001 !important;
 background-color: #000000;
 }
-
-
 
 footer {
     width: 100%;
@@ -104,3 +102,17 @@ footer {
     color: #0972c9;
 }
 
+.facultatif {
+    color: grey !important;
+    font-style: italic;
+    margin-left: 10px;
+    font-size: 0.8rem !important;
+}
+
+label {
+    color: white !important;
+}
+
+input {
+    color: #0972c9 !important;
+}

@@ -24,7 +24,12 @@ Route::get('/events', function (){
 });
 
 // PAGE EVÈNEMENTS - CRUD
+// READ
 Route::get('/admin/events', 'EventsController@indexAllEvents');
+
+// CREATE
+Route::get('/admin/events/new', 'EventsController@create');
+Route::post('/admin/events/store','EventsController@store');
 
 //SUGGESTIONS - CRUD ---------------------
 //FORMULAIRE
