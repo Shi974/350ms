@@ -34,6 +34,12 @@ Route::get('/admin/events', 'EventsController@indexAllEvents');
 Route::get('/admin/events/new', 'EventsController@create');
 Route::post('/admin/events/store','EventsController@store');
 
+//EDIT
+Route::get('/admin/events/edit/{id}', 'EventsController@edit');
+
+//UPDATE
+Route::post('/admin/events/update/{id}', 'EventsController@update');
+
 // DELETE
 Route::get('/admin/events/delete/{id}', 'EventsController@destroy');
 
