@@ -25,6 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/events', 'EventsController@indexEvent');
 
+// ---------------------------------------
 // PAGE EVÈNEMENTS - CRUD
 // READ
 Route::get('/admin/events', 'EventsController@indexAllEvents');
@@ -33,7 +34,12 @@ Route::get('/admin/events', 'EventsController@indexAllEvents');
 Route::get('/admin/events/new', 'EventsController@create');
 Route::post('/admin/events/store','EventsController@store');
 
-//SUGGESTIONS - CRUD ---------------------
+// DELETE
+Route::get('/admin/events/delete/{id}', 'EventsController@destroy');
+
+// ---------------------------------------
+
+//SUGGESTIONS - CRUD
 //FORMULAIRE
 Route::get('/formulaire-suggestions', 'SuggestionsController@form');
 //CREATE
@@ -43,4 +49,5 @@ Route::get('/suggestions', 'SuggestionsController@read');
 //UPDATE ???
 //DELETE ( ADMIN )
 Route::get('/suggestions/destroy/{id}', 'SuggestionsController@destroy');
-// FIN CRUD ------------------------------
+
+// ---------------------------------------

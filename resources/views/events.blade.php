@@ -2,11 +2,10 @@
 
 @section('content')
 
-<div clas="container">
+<div clas="container" id="events_users">
+    
     <div class="text-center text-justify">
-
         <h2> Evènements </h2>
-
     </div>
 
     <div class="container">
@@ -23,7 +22,6 @@
                         Horaire: {{$event->horaire_debut}} <br />
                         Lieu : {{ $event->lieu}} <br />
                         Nombre de place : {{ $event->nb_place}}
-
                     </span>
                 </div>
                 <div class="d-flex justify-content-end">
@@ -37,6 +35,5 @@
         </section>
     </div>
 </div>
-
 
 @endsection

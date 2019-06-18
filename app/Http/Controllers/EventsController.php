@@ -13,6 +13,7 @@ class EventsController extends Controller
         return view('admin.events_crud', ['events' => $events]);
     }
 
+    // CREATE EVENTS
     public function create() {
         return view('admin.events_form_new');
     }
@@ -43,7 +44,15 @@ class EventsController extends Controller
 
         $event->save();
         return redirect()->action("EventsController@indexAllEvents");
+    }
 
+    // DELETE EVENTS
+    public function destroy($id){
+        //dd($id);
+        Event::where('id',$id)
+        ->delete();
+
+        return redirect()->action("EventsController@indexAllEvents");
     }
     
     //RETRIEVE DE TOUS LES EVENTS - USERS
