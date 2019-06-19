@@ -15,17 +15,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/profil', function () {
-    return view('profil');
-});
+
+//  Route::get('/profil', function () {
+//     return view('profil');
+// });
 
 Route::get('/profil', 'ProfilController@profil');//profil utilisateur
+
+Route::get('/user/edit/{id}', 'ProfilController@edit');//route bouton modifier
+
+Route::patch('/profil/update/{id}', 'ProfilController@update');//route formulaire de modification
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/events', 'EventsController@indexEvent');
+
+// ---------------------------------------
+
+// PAGE ADMIN
+Route::get('/admin', function () {
+    return view('admin.admin');
+});
 
 // ---------------------------------------
 // PAGE EVÈNEMENTS - CRUD
@@ -49,24 +61,20 @@ Route::get('/admin/events/delete/{id}', 'EventsController@destroy');
 
 //SUGGESTIONS - CRUD
 
-//FORMULAIRE
-Route::get('/formulaire-suggestions', 'SuggestionsController@form');
+//FORMULAIRE - USERS
+Route::get('/suggestions', 'SuggestionsController@form');
 
 //CREATE
 Route::post('/suggestions/create', 'SuggestionsController@store');
 
 //READ ( ADMIN )
-Route::get('/suggestions', 'SuggestionsController@read');
+Route::get('/admin/suggestions', 'SuggestionsController@read');
 
 //UPDATE ???
 
 //DELETE ( ADMIN )
 Route::get('/suggestions/destroy/{id}', 'SuggestionsController@destroy');
-// FIN CRUD ------------------------------
 
-// ------------------------------
-
-
+// ---------------------------------------
 
 Route::post('/ajout_avatar', 'ProfilController@ajoutAvatar');
-

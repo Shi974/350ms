@@ -5,14 +5,14 @@
 <div clas="container" id="events_users">
     
     <div class="text-center text-justify">
-        <h2> Evènements </h2>
+        <h3> Evènements </h3>
     </div>
 
     <div class="container">
         <section class="d-flex flex-column">
             @foreach($events as $event)
             <article aria-label="article {{$event->jeu}}" class=" card border-light p-3 mb-5 rounded">
-                <h4 class="text-center d" aria-label="">{{ $event->jeu }}</h4>
+                <h4 class="text-center" aria-label="">{{ $event->jeu }}</h4>
 
                 <div class="d-flex flex-row justify-content-aroun w-100">
 
@@ -29,8 +29,8 @@
                     </span>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <a href="" class="btn btn-outline-danger" aria-label="Lire davantage sur ce sujet">En savoir
-                        plus
+                    <a href="" class="btn btn-outline-danger font-weight-bold" aria-label="Lire davantage sur ce sujet">
+                        En savoir plus
                     </a>
                 </div>
 
