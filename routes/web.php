@@ -15,11 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 //  Route::get('/profil', function () {
 //     return view('profil');
 // });
 
 Route::get('/profil', 'ProfilController@profil');//profil utilisateur
+
+Route::get('/user/edit/{id}', 'ProfilController@edit');//route bouton modifier
+
+Route::patch('/profil/update/{id}', 'ProfilController@update');//route formulaire de modification
 
 Auth::routes();
 

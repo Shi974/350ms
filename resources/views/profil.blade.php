@@ -36,7 +36,7 @@
             </p>
             <br />
 
-      <!-- <a href="/user/edit/{{$users->id}}" role="button" class=" btn btn-outline-success">Modifier<a> -->
+      <a href="/user/edit/{{$users->id}}" role="button" class=" btn btn-outline-success">Modifier<a>
                     </ul>
         </div>
            
