@@ -29,7 +29,7 @@
         </p>
         
         <div class="d-flex justify-content-end">
-            <a href="idEvent/{{ $event->id }}" class="btn btn-outline-danger font-weight-bold"
+            <a href="idEvent/{{ $event->id }}" class="btn btn-outline-danger font-weight-bold"g
                 aria-label="Lire davantage sur ce sujet">
                 s'inscrire
             </a>
