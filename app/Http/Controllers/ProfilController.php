@@ -3,12 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Auth;
+
 use App\User;
+use App\Role;
 use DB;
-use Auth;
+
 
 class ProfilController extends Controller
 {
+ public function profil(){
+     
+    $users = Auth::user();
+    
+    return view('profil',['users' => $users]);
+    }
+
     public function ajoutAvatar(){
       
 
