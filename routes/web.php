@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::get('/profil', 'ProfilController@profil');//profil utilisateur
 
-Route::get('/user/edit/{id}', 'ProfilController@edit');//route bouton modifier
+Route::get('/profil/edit/{id}', 'ProfilController@edit');//route bouton modifier
 
 Route::patch('/profil/update/{id}', 'ProfilController@update');//route formulaire de modification
 
