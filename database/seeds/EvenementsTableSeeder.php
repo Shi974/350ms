@@ -1,11 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Event_user;
-use App\Event;
-use App\User;
+use App\Evenement;
 
-class EventsTableSeeder extends Seeder
+class EvenementsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +12,7 @@ class EventsTableSeeder extends Seeder
      */
     public function run()
     {
-        $event = new Event;
+        $event = new Evenement;
         $event->jeu = "Rocket League";
         $event->date = "2019-07-15";
         $event->horaire_debut = "10:30:00";
@@ -28,7 +26,7 @@ class EventsTableSeeder extends Seeder
         $event->prix = null;
         $event->save();
 
-        $event = new Event;
+        $event = new Evenement;
         $event->jeu = "Soul Calibur";
         $event->date = "2019-08-13";
         $event->horaire_debut = "15:45:00";
@@ -42,7 +40,7 @@ class EventsTableSeeder extends Seeder
         $event->prix = null;
         $event->save();
 
-        $event = new Event;
+        $event = new Evenement;
         $event->jeu = "Tekken 7";
         $event->date = "2019-06-21";
         $event->horaire_debut = "20:00:00";
