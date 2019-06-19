@@ -1,10 +1,8 @@
-body{
+body {
     background-color: #000000 !important;
 }
 
-
 .banner {
-
     /* border: 2px solid #ea0001; */
     width: 100%;
     height: 20%;
@@ -12,7 +10,6 @@ body{
     background-position: center;
 
 }
-
 
 .logo {
     width: 5%;
@@ -64,6 +61,13 @@ nav {
     color: #000000;
 }
 
+nav .btn-outline-primary {
+    margin-left: 15px;
+}
+
+nav .btn-outline-primary a:hover {
+    color: black !important;
+}
 
 .liste {
     font-family: 'Comfortaa', cursive;
@@ -71,11 +75,11 @@ nav {
     font-size: 25px;
 }
 
-.container{
+.container {
     padding-top: 50px;
 }
 
-.card{
+.card {
     background-color: #000000 !important;
     color:#0972c9 !important;
 }
@@ -83,50 +87,53 @@ nav {
 .card-header{
     font-size:30px;
     color:#ea0001 !important;
-
-
 }
 
-.btn-outline-danger{
+.btn-outline-danger {
 border-color:  #ea0001 !important;
 color:#ea0001 !important;
 background-color: #000000;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: #000000 !important;
 }
 
-.dropdown-item{
+.dropdown-item {
     background-color: #000000 !important;
     color:#0972c9 !important;
 }
 
-article{   
+article {   
     color:#000000 !important;
     border-color: whitesmoke !important; 
 } 
 
-article .btn{ 
+article .btn { 
     width:20%;
 
 }
 
-h4{
+h4 {
 
   font-size:25px !important;
   color: #ea0001 !important;
 }
-.w-75{
+
+.w-75 {
     font-size:20px;
     display:flex;
     align-items: center;
 }
 
-.alert{
+.alert {
     font-size:25px;
 }
 
+.fas {
+    font-size: 30px;
+    
+}
 
 footer {
     width: 100%;
@@ -139,3 +146,27 @@ footer {
     color: #0972c9;
 }
 
+/* UTILISES LORS DES FORMULAIRES */
+.facultatif {
+    color: grey !important;
+    font-style: italic;
+    margin-left: 10px;
+    font-size: 0.8rem !important;
+}
+
+label {
+    color: white !important;
+}
+
+input {
+    color: #0972c9 !important;
+}
+
+/* PAGE EVENTS - USERS */
+#events_users img {
+    max-width: 240px;
+}
+
+#events_users .btn-outline-danger:hover {
+    color: white !important
+}

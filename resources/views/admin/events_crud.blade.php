@@ -26,6 +26,7 @@
                 <th scope="col">Fin des inscriptions</th>
                 <th scope="col">Récompense</th>
                 <th scope="col">Prix d'entrée</th>
+                <th scope="col">Joueurs inscrits</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -42,6 +43,8 @@
                     <td class="text-center"> {{ $event->fin_inscription }} </td>
                     <td class="text-center"> {{ $event->recompense }} </td>
                     <td class="text-center"> {{ $event->prix }} </td>
+                    <!-- LA LIAISON ENTRE EVENT ET USER NE FONCTIONNE PAS -->
+                    <td>{{ $event->user_id }}</td>
                     <td class="text-center">
                         <a href="/admin/events/edit/{{ $event->id}}">
                             <button type="button" class="btn btn-warning">Modifier</button>
@@ -59,6 +62,6 @@
 <hr>
 
 <div class="text-center">
-    <a href="/admin/event/new"><button type="button" class="btn btn-primary">Ajouter un évènement</button></a>
+    <a href="/admin/events/new"><button type="button" class="btn btn-primary">Ajouter un évènement</button></a>
 </div>
 @stop

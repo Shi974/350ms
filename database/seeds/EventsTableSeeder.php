@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Event_user;
 use App\Event;
 use App\User;
 

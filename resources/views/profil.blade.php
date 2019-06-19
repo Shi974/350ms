@@ -39,10 +39,30 @@
       <!-- <a href="/user/edit/{{$users->id}}" role="button" class=" btn btn-outline-success">Modifier<a> -->
                     </ul>
         </div>
+           
 
+            <form class="section" action="/ajout_avatar" method="post" enctype="multipart/form-data">
+                @csrf
+
+                <div class="field">
+                    <label class="label"> Ajouter un Nouvel avatar : </label>
+                    <div class="control">
+                        <input class="input" type="file" name="avatar">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <button class="button is link" type="submit">Ajouter avatar</button>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+
+        </div>
     </div>
-
-
-
 </div>
-@endsection
+ @endsection

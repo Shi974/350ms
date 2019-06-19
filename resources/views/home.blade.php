@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.main') 
+{{-- j'ai changé le layout app en main --}}
 
 @section('content')
 <div class="container">
