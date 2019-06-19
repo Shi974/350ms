@@ -18,18 +18,19 @@
 
                 
                     <figure style="width:20%" class="w-25">
-                        <img src="/images/{{ $event->image }}" alt="" title="" />
+                        <img src="/images/{{ $event->image }}" alt="Jaquette de {{ $event->image }}" 
+                        title="Jaquette de {{ $event->image }}"/>
                     </figure>
 
 
                     <span class="w-75">
-                        Horaire: {{$event->horaire_debut}} <br />
+                        Horaire : {{$event->horaire_debut}} <br />
                         Lieu : {{ $event->lieu}} <br />
-                        Nombre de place : {{ $event->nb_place}}
+                        Nombre de places : {{ $event->nb_place}}
                     </span>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <a href="" class="btn btn-outline-danger font-weight-bold" aria-label="Lire davantage sur ce sujet">
+                    <a href="/events/details/{{$event->id}}" class="btn btn-outline-danger font-weight-bold" aria-label="Lire davantage sur ce sujet">
                         En savoir plus
                     </a>
                 </div>
