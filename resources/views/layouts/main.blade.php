@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    
+
     <header>
         <div class="banner d-flex flex-row align-items-center">
             <img src="/images/logo.png" class="logo" alt="logo">
@@ -42,6 +42,10 @@
             </div>
 
             <div class="mx-auto order-0">
+                <li class="nav-item active">
+                    <!-- <img src="/images/logo.png" class="logo navbrand-logo" alt="logo"> -->
+                    <p class="d-md-block d-lg-none">350ms Klub | GDK concept</p>
+                </li>
             {{-- ELEMENTS NAV APPARAISSANT QU À L ADMIN --}}
             @auth
                 @if (Auth::User() -> hasRole("Admin"))
@@ -49,11 +53,11 @@
                         <a class="navbar-brand mx-auto font-weight-bold" href="/admin">
                             Page d'Administration</a>
                     </li>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                        <span class="navbar-toggler-icon"><i class="fas fa-angle-double-down"></i></span>
-                    </button>
                 @endif
             @endauth
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                    <span class="navbar-toggler-icon"><i class="fas fa-angle-double-down"></i></span>
+                </button>
             </div>
 
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
@@ -106,6 +110,7 @@
         <p>Made with 💙 by GDK Enterprise © 2019 All rights reserved.</p>
     </footer>
 
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -115,7 +120,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
