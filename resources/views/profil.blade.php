@@ -35,7 +35,7 @@
 
 
         <div class="modif text-center">
-            <a href="/user/edit/{{}}" role="button" class=" btn btn-outline-success">Modifier<a>
+            <a href="/profil/edit/{{$users->id}}" role="button" class=" btn btn-outline-success">Modifier<a>
         </div>
     </div>
     

@@ -19,6 +19,37 @@ class ProfilController extends Controller
     
     return view('profil',['users' => $users]);
     }
+    public function edit($id) //fonction pour le bouton modifier
+    {   
+        $users = User::where('id' , $id)->first();
+        return view('profil_update', ['users' => $users]);
+    }
+
+      
+    public function update($id,Request $request ) //fonction pour maj profil user
+    { 
+      // dd($request-> all());
+
+
+     $users= $request -> all();
+
+       $request->validate ([
+        "firstname" => 'required',
+        "lastname" => 'required',        
+        "age" => 'required',
+        "email" => 'required',
+        "phone" => 'required',
+        "pseudo" => 'required']);
+        
+          User::where('id', $id)->update([
+            'firstname' => $request->prenom,
+        'lastname' => $request->nom,
+        'email' => $request->email,
+        'phone' => $request->phone,
+        'pseudo' => $request->pseudo]);
+
+        return redirect()-> action('ProfilController@profil');
+          }
 
     public function ajoutAvatar(){
       
