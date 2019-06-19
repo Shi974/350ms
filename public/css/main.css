@@ -144,6 +144,10 @@ img{
     padding-right:100px;
 }
 
+.label{
+    font-size:20px;
+}
+
 .w-75 {
     font-size:20px;
     display:flex;
