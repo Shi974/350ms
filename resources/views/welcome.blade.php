@@ -1,15 +1,34 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="text-center">
-<h2>Nombre de tournoi organisés:</h2>
-<div id='odometer' class='odometer'>0</div>
+
+<div class="d-flex text-center justify-content-between p-0 m-0">
+    <div>
+        <div id='nbTournois' class='odometer'>0</div>
+        <h2>Tournoi organisés à la Réunion</h2>
+    </div>
+
+    <div >
+        <div id='nbgagant' class='odometer'>0</div>
+            <h2>Seul gagant par Tournois !</h2>
+    </div>
+
+    <div>
+            <div id='nbParticipants' class='odometer'>0</div>
+            <h2>Joueurs participants au 350ms Klub:</h2>
+        </div>
+    </div>
+
+
+
+
 </div>
 <style>
     .odometer {
         font-size: 100px;
         color: red;
     }
+
 </style>
 
 <div class="container">
@@ -39,7 +58,9 @@
     <script>
         function myFunction() {
             setTimeout(function () {
-                odometer.innerHTML = 34;
+                nbTournois.innerHTML = 149;
+                nbParticipants.innerHTML = 1342;
+                nbgagant.innerHTML = 1;
             }, );
         }
 
