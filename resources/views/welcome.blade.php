@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div clas="container">
+<div class="container">
         <div class="text-center text-justify">
-            <h2>Welcome</h2>
+            <h3>Welcome</h3>
         </div>
 
         <div class="intro text-justify">

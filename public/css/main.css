@@ -116,8 +116,21 @@ article .btn {
 
 h4 {
 
-  font-size:25px !important;
-  color: #ea0001 !important;
+  color: #0972c9 !important;
+}
+
+img{
+    widows: 200px;
+    height:200px;
+    border: 2px solid whitesmoke !important
+}
+
+.text-center{
+    color:whitesmoke;
+}
+
+.content{
+    padding-right:100px;
 }
 
 .w-75 {
