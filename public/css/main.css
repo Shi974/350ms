@@ -33,6 +33,10 @@ h3 {
     color: #ea0001;
 }
 
+h4 {
+    color: #0972c9 !important;
+}
+
 .intro {
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
@@ -44,9 +48,19 @@ h3 {
     min-height: 200px;
 }
 
+header img {
+    margin-left: 1vw !important;
+}
+
+header .title {
+    margin-left: 1vw !important;
+}
+
 /* NAVBAR */
 nav {
     background-color: #000000;
+    margin-top: 2vh !important;
+    margin-bottom: 5vh !important;
 }
 
 .nav-link {
@@ -76,11 +90,6 @@ nav .btn-outline-primary a:hover {
     color: black !important;
 }
 
-.navbar-toggler {
-    color: #ea0001 !important;
-    border: 2px solid white;
-}
-
 .liste {
     font-family: 'Comfortaa', cursive;
     color: #ea0001;
@@ -96,7 +105,7 @@ nav .btn-outline-primary a:hover {
     color:#0972c9 !important;
 }
 
-.card-header{
+.card-header {
     font-size:30px;
     color:#ea0001 !important;
 }
@@ -125,12 +134,7 @@ article .btn {
     width:20%;
 }
 
-h4 {
-
-  color: #0972c9 !important;
-}
-
-img{
+img {
     widows: 200px;
     height:200px;
     border: 2px solid whitesmoke !important
@@ -202,4 +206,43 @@ input {
 
 #events_users h4 {
     font-family: 'Comfortaa', cursive;
+}
+
+/* CLASSE POUR FAIRE FONCTIONNER MA FONCTION JQUERY */
+.img_hover {
+    transform: scale(1.5);
+}
+
+/* ADMIN */
+
+/* RESPONSIVE */
+@media all and (max-width: 415px) {
+    /* NAV */
+    /* .navbrand-logo {
+        min-height: 50px;
+        min-width: 50px;
+    } */
+
+    /* nav .nav-item {
+        display: flex;
+    } */
+
+    .navbar-toggler {
+        color: #ea0001 !important;
+        border: 2px solid white;
+    }
+
+    .mx-auto {
+        text-align: center !important;
+    }
+
+    /* ADMIN */
+    .resp {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .resp button {
+        margin-bottom: 2vh !important;
+    }
 }

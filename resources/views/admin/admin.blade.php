@@ -1,25 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-
-<head>
-    <style>
-        * {
-            max-height: 100vh;
-        }
-
-        button {
-            background-color: #4900a0 !important;
-            border: 1px solid #4900a0 !important;
-        }
-
-        img {
-            max-width:100%;
-            max-height:100%;
-        }
-    </style>
-</head>
-
 <div class="container justify-content-center">
 
     <div class="d-flex justify-content-center mt-5 img">
