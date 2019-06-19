@@ -42,7 +42,7 @@ class UsersTableSeeder extends Seeder
         $user->firstname = "Charles";
         $user->lastname = "Atan";
         $user->email = "chacha@mail.com";
-        $user->password = '$2y$10$u.rDmNnBIl/jRI1B45pl8OJwiGvwzmwnaTs5j2dQGL9gCpFAJD.Qi';
+        $user->password = '$2y$10$k5FL.K9NjvTwC2jCeU0L0eYbt5AtY1JF2z7am0tcibOSTBJMvGoK6'; //charlaille
         $user->phone = "0692010205";
         $user->pseudo = "charly";
         $user->save();
@@ -52,9 +52,19 @@ class UsersTableSeeder extends Seeder
         $user->firstname = "Paul";
         $user->lastname = "Hemic";
         $user->email = "paul@mail.com";
-        $user->password = '$2y$10$Bk38RG1lf5dSKvt74DkEJeOA99Jz07INv1u/5MhFextiao9nG6d3e';
+        $user->password = '$2y$10$gCJvYvFR1Xu5BxL46x9JQehFVC8fNE8NuQlMonfu38Ms.VsxCRWvS'; //Polhisse
         $user->phone = "0692010206";
         $user->pseudo = "Pol_his";
+        $user->save();
+        $user->roles()->attach($role_user->id);
+
+        $user = new User;
+        $user->firstname = "Annie";
+        $user->lastname = "STM";
+        $user->email = "annie@mail.com";
+        $user->password = '$2y$10$srE0kIgo6IAVg2E.wAt9Qe2sJru5MNflgCkqT0xKWNf5L9AZep/jG'; //AnnieShi974
+        $user->phone = "0692292929";
+        $user->pseudo = "Shi974";
         $user->save();
         $user->roles()->attach($role_user->id);
     }
