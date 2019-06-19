@@ -35,6 +35,7 @@
             <a href="/profil/edit/{{$users->id}}" role="button" class=" btn btn-outline-success">Modifier<a>
         </div>
     </div>
+    
     <div class="addAvatar">
         <form class="section" action="/ajout_avatar" method="post" enctype="multipart/form-data">
             @csrf

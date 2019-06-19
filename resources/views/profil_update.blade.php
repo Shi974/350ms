@@ -76,4 +76,23 @@
     </div>
 </div>
 
+<div class="addAvatar">
+        <form class="section" action="/ajout_avatar" method="post" enctype="multipart/form-data">
+            @csrf
+
+            <div class="field">
+                <label class="label"> Ajouter/Modifier mon avatar : </label>
+                <div class="control">
+                    <input class="input" type="file" name="avatar">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <button class="btn btn-outline-success" type="submit">Ajouter avatar</button>
+                </div>
+            </div>
+        </form>
+
+
 @endsection

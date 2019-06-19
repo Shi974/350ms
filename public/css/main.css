@@ -209,6 +209,29 @@ input {
     font-family: 'Comfortaa', cursive;
 }
 
+/* PAGE EVENT - ID - USERS */
+#event_id .d-flex {
+    font-size: 1.5em;
+    justify-content: center;
+    color: white;
+}
+
+#event_id .d-flex img {
+    margin-right: 5vw !important;
+}
+
+#event_id .d-flex span {
+    color: #0972c9 !important;
+}
+
+#event_id p {
+    font-size: 1.5em;
+}
+
+#event_id p span {
+    color: #0972c9 !important;
+}
+
 /* CLASSE POUR FAIRE FONCTIONNER MA FONCTION JQUERY */
 .img_hover {
     transform: scale(1.5);
@@ -245,5 +268,22 @@ input {
 
     .resp button {
         margin-bottom: 2vh !important;
+    }
+
+    /* EVENT ID - USERS */
+    #event_id .d-flex {
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #event_id img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #event_id p {
+        font-size: 1.5em;
+        text-align: left !important;
     }
 }
