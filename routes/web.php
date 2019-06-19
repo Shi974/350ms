@@ -77,4 +77,9 @@ Route::get('/suggestions/destroy/{id}', 'SuggestionsController@destroy');
 
 // ---------------------------------------
 
+//AJOUT AVATAR USER
 Route::post('/ajout_avatar', 'ProfilController@ajoutAvatar');
+
+
+//RETRIEVE EVENT BY ID - USER
+Route::get('/events/details/{id}', 'EventsController@singleIndex');

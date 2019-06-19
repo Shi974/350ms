@@ -29,7 +29,7 @@
                     </span>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <a href="" class="btn btn-outline-danger font-weight-bold" aria-label="Lire davantage sur ce sujet">
+                    <a href="/events/details/{{$event->id}}" class="btn btn-outline-danger font-weight-bold" aria-label="Lire davantage sur ce sujet">
                         En savoir plus
                     </a>
                 </div>
