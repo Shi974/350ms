@@ -33,6 +33,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/events', 'EventsController@indexEvent');
 
 // ---------------------------------------
+
+// PAGE ADMIN
+Route::get('/admin', function () {
+    return view('admin.admin');
+});
+
+// ---------------------------------------
 // PAGE EVÈNEMENTS - CRUD
 // READ
 Route::get('/admin/events', 'EventsController@indexAllEvents');
@@ -54,24 +61,20 @@ Route::get('/admin/events/delete/{id}', 'EventsController@destroy');
 
 //SUGGESTIONS - CRUD
 
-//FORMULAIRE
-Route::get('/formulaire-suggestions', 'SuggestionsController@form');
+//FORMULAIRE - USERS
+Route::get('/suggestions', 'SuggestionsController@form');
 
 //CREATE
 Route::post('/suggestions/create', 'SuggestionsController@store');
 
 //READ ( ADMIN )
-Route::get('/suggestions', 'SuggestionsController@read');
+Route::get('/admin/suggestions', 'SuggestionsController@read');
 
 //UPDATE ???
 
 //DELETE ( ADMIN )
 Route::get('/suggestions/destroy/{id}', 'SuggestionsController@destroy');
-// FIN CRUD ------------------------------
 
-// ------------------------------
-
-
+// ---------------------------------------
 
 Route::post('/ajout_avatar', 'ProfilController@ajoutAvatar');
-
