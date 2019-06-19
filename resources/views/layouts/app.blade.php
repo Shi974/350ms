@@ -66,7 +66,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" style="font-size:20px" href="profil">
+                                <a class="dropdown-item" style="font-size:20px" href="/profil">
                                         {{ __('Accéder à votre profil') }}
                                     </a>
                                     <a class="dropdown-item" style="font-size:20px" href="{{ route('logout') }}"

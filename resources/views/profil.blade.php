@@ -14,29 +14,29 @@
                 <div class="card-body">
                 <ul>
                     <li>
-                        <h5 class="font-weight-bold">Prenom :</h5> {{ $user->firstname }}
+                        <h5 class="font-weight-bold">Prenom :</h5> {{ $users->firstname }}
                     </li>
                     <li>
-                        <h5 class="font-weight-bold">Nom :</h5>{{ $user->lastname }}
-                    </li>
-
-                    <li>
-                        <h5 class="font-weight-bold">Email :</h5> {{ $user->email }}
-                    </li>
-                    <li>
-                        <h5 class="font-weight-bold">Téléphone : </h5>{{ $user->phone }}
-                    </li>
-                    <li>
-                        <h5 class="font-weight-bold">Pseudo : </h5>{{ $user->pseudo }}
+                        <h5 class="font-weight-bold">Nom :</h5>{{ $users->lastname }}
                     </li>
 
                     <li>
-                        <h5 class="font-weight-bold">Avatar :</h5>{{ $user->avatar }}
+                        <h5 class="font-weight-bold">Email :</h5> {{ $users->email }}
+                    </li>
+                    <li>
+                        <h5 class="font-weight-bold">Téléphone : </h5>{{ $users->phone }}
+                    </li>
+                    <li>
+                        <h5 class="font-weight-bold">Pseudo : </h5>{{ $users->pseudo }}
+                    </li>
+
+                    <li>
+                        <h5 class="font-weight-bold">Avatar :</h5>{{ $users->avatar }}
                     </li>
             </p>
             <br />
 
-      <a href="/user/edit/{{$users->id}}" role="button" class=" btn btn-outline-success">Modifier<a>
+      <!-- <a href="/user/edit/{{$users->id}}" role="button" class=" btn btn-outline-success">Modifier<a> -->
                     </ul>
         </div>
 
