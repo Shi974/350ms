@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Event;
+use App\Evenement;
 
 class EventsController extends Controller
 {
     // RETRIEVE DE TOUS LES EVENTS - ADMIN
     public function indexAllEvents() {
-        $events = Event::all();
+        $events = Evenement::all();
         return view('admin.events_crud', ['events' => $events]);
     }
 
@@ -29,7 +29,7 @@ class EventsController extends Controller
             'nb_place'=>'required',
         ]);
 
-        $event = new Event;
+        $event = new Evenement;
         $event->jeu = $request['jeu'];
         $event->date =$request['date'];
         $event->horaire_debut =$request['horaire_debut'];
@@ -49,7 +49,7 @@ class EventsController extends Controller
     // EDIT + UPDATE EVENTS
     public function edit($id) {
         //dd($id);
-        $event=Event::find($id);
+        $event=Evenement::find($id);
         return view('admin.events_form_edit', ['event'=>$event]);
     }
 
@@ -63,7 +63,7 @@ class EventsController extends Controller
             'nb_place'=>'required',
         ]);
 
-        $event = Event::where('id',$id)->first();
+        $event = Evenement::where('id',$id)->first();
 
         $event->jeu = $request->jeu;
         $event->date = $request->date;
@@ -92,7 +92,7 @@ class EventsController extends Controller
     
     //RETRIEVE DE TOUS LES EVENTS - USERS
     public function indexEvent() {
-        $events = Event::all();
+        $events = Evenement::all();
         return view('events', ['events' => $events]);
     }
 }
