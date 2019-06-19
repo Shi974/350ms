@@ -3,7 +3,6 @@
 use Illuminate\Database\Seeder;
 use App\User;
 use App\Role;
-use App\Event;
 
 class UsersTableSeeder extends Seeder
 {

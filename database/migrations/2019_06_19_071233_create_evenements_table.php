@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventsTable extends Migration
+class CreateEvenementsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('evenements', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            //$table->bigIncrements('id');
             $table->string('jeu');
             $table->date('date'); // DATE : stocke une date au format AAAA-MM-JJ (Année-Mois-Jour)
             $table->time('horaire_debut'); // TIME -> format hh:mm:ss
@@ -38,6 +40,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('events');
+        Schema::dropIfExists('evenements');
     }
 }
