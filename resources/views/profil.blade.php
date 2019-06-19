@@ -16,8 +16,7 @@
     <div class="contenu">
 
         <div class="text-center">
-
-
+            
             <h4 class="font-weight-bold">Prenom :</h4> {{ $users->firstname }}
 
             <h4 class="font-weight-bold">Nom :</h4>{{ $users->lastname }}

@@ -95,4 +95,15 @@ class EventsController extends Controller
         $events = Evenement::all();
         return view('events', ['events' => $events]);
     }
+
+
+    //RETRIEVE EVENT BY ID - USERS
+    public function singleIndex($id){
+        $event=Evenement::find($id);
+        return view('idEvent', ['event'=>$event]);
+    }
+
+    
+
+
 }
