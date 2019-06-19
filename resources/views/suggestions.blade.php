@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <hr>
 
 <div class="container-fluid">

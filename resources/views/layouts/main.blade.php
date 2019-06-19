@@ -1,22 +1,20 @@
 <!doctype html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>350ms Klub</title>
-
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
+    
     <header>
         <div class="banner d-flex flex-row align-items-center">
             <img src="/images/logo.png" class="logo" alt="logo">
@@ -28,64 +26,74 @@
 
         <nav class="navbar navbar-expand-lg">
 
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/">Accueil </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/events">Evènements</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="font-size: 20px;"
-                        href="/formulaire-suggestions">Suggestions</a>
-                </li>
-            </ul>
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/">Accueil </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/events">Evènements</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold" style="font-size: 20px;"
+                            href="/suggestions">Suggestions</a>
+                    </li>
+                </ul>
+            </div>
 
-            <ul class="navbar-nav ml-auto">
+            <div class="mx-auto order-0">
+            {{-- ELEMENTS NAV APPARAISSANT QU À L ADMIN --}}
             @auth
                 @if (Auth::User() -> hasRole("Admin"))
                     <li class="nav-item active">
-                        <a class="nav-link font-weight-bold" style="font-size: 20px;"
-                        href="/admin/events">Gérer évènements</a>
+                        <a class="navbar-brand mx-auto font-weight-bold" href="/admin">
+                            Page d'Administration</a>
                     </li>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                        <span class="navbar-toggler-icon"><i class="fas fa-angle-double-down"></i></span>
+                    </button>
                 @endif
             @endauth
+            </div>
 
-            @guest
-                <li class="nav-item">
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                @guest
+                <li class="nav-item active">
                     <button type="button" class="btn btn-outline-primary">
-                        <a class="font-weight-bold" style="font-size: 20px;" href="/login">Se connecter</a>
+                        <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/login">Se connecter</a>
                     </button>
                 </li>
                 @if (Route::has('register'))
-                <li class="nav-item">
-                    <button type="button" class="btn btn-outline-primary">
-                        <a class="font-weight-bold" style="font-size: 20px;" href="/register">S'enregistrer</a>
-                    </button>
-                </li>
+                    <li class="nav-item active">
+                        <button type="button" class="btn btn-outline-primary">
+                            <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/register">S'enregistrer</a>
+                        </button>
+                    </li>
                 @endif
                 @else
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle " style="font-size:25px" href="#"
-                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> <i class="fas fa-gamepad"></i>
-                        {{ Auth::user()->pseudo }} <span class="caret"></span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" style="font-size:20px" href="/profil">
-                            {{ __('Accéder à votre profil') }}
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle font-weight-bold" style="font-size:20px" href="#"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> <i class="fas fa-gamepad"></i>
+                            {{ Auth::user()->pseudo }} <span class="caret"></span>
                         </a>
-                        <a class="dropdown-item" style="font-size:20px" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            {{ __('Se déconnecter') }}
-                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" style="font-size:20px" href="/profil">
+                                {{ __('Accéder à votre profil') }}
+                            </a>
+                            <a class="dropdown-item" style="font-size:20px" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                {{ __('Se déconnecter') }}
+                            </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-                </li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
                 @endguest
-            </ul>
+                </ul>
+            </div>
 
         </nav>
     </header>
@@ -95,7 +103,7 @@
 
 
     <footer>
-        <p>Mentions Légales : © Copyright 2019 GDK Enterprise </p>
+        <p>Made with 💙 by GDK Enterprise © 2019 All rights reserved.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

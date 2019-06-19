@@ -1,5 +1,6 @@
 body {
     background-color: #000000 !important;
+    min-height: 100vh !important;
 }
 
 .banner {
@@ -8,7 +9,6 @@ body {
     height: 20%;
     background-image: url("/images/bg.jpg");
     background-position: center;
-
 }
 
 .logo {
@@ -31,7 +31,6 @@ h2 {
 h3 {
     font-family: 'Comfortaa', cursive;
     color: #ea0001;
-
 }
 
 .intro {
@@ -40,25 +39,33 @@ h3 {
     color: whitesmoke;
 }
 
+/* HEADER */
+.banner {
+    min-height: 200px;
+}
+
+/* NAVBAR */
 nav {
-
     background-color: #000000;
-
 }
 
 .nav-link {
     font-family: 'Comfortaa', cursive;
     color: #0972c9 !important;
-
 }
 
 .nav-item {
     font-family: 'Comfortaa', cursive;
     color: #0972c9 !important;
+    list-style-type: none;
 }
 
 .navbar {
     color: #000000;
+}
+
+nav a:hover {
+    color: #ea0001 !important;
 }
 
 nav .btn-outline-primary {
@@ -67,6 +74,11 @@ nav .btn-outline-primary {
 
 nav .btn-outline-primary a:hover {
     color: black !important;
+}
+
+.navbar-toggler {
+    color: #ea0001 !important;
+    border: 2px solid white;
 }
 
 .liste {
@@ -111,11 +123,9 @@ article {
 
 article .btn { 
     width:20%;
-
 }
 
 h4 {
-
   font-size:25px !important;
   color: #ea0001 !important;
 }
@@ -132,21 +142,22 @@ h4 {
 
 .fas {
     font-size: 30px;
-    
 }
 
 footer {
+    margin-top: 5vh !important;
+    text-align: center;
     width: 100%;
     height: 10%; 
     background-color: #000000;
-    /* position: absolute; */
+    position: relative;
     left: 0;
-    bottom: 0;
+    bottom: 0 !important;
     font-family: 'Comfortaa', cursive;
     color: #0972c9;
 }
 
-/* UTILISES LORS DES FORMULAIRES */
+/* UTILISÉS LORS DES FORMULAIRES */
 .facultatif {
     color: grey !important;
     font-style: italic;
@@ -169,4 +180,8 @@ input {
 
 #events_users .btn-outline-danger:hover {
     color: white !important
+}
+
+#events_users h4 {
+    font-family: 'Comfortaa', cursive;
 }
