@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\User;
 use App\Role;
-use DB;
+
 
 
 class ProfilController extends Controller
@@ -28,7 +28,7 @@ class ProfilController extends Controller
       
     public function update($id,Request $request ) //fonction pour maj profil user
     { 
-      // dd($request-> all());
+      
 
 
      $users= $request -> all();
