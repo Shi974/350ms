@@ -12,7 +12,7 @@
 
             <div class="form-group ">
                 <label for="inputProduct">Prenom</label>
-                <input type="text" class="form-control" id="inputprenom" name="prenom" value="{{$users->firstname}}">
+                <input type="text" class="form-control" id="inputprenom" name="firstname" value="{{$users->firstname}}">
             </div>
 
             @if($errors-> has('firstname'))
@@ -23,8 +23,8 @@
 
             <div class="form-group ">
                 <label for="inputFamily" name="family">Nom</label>
-                <input type="text" class="form-control" id="inputName" name="nom" value="{{$users->lastname}}">
-
+                <input type="text" class="form-control" id="inputName" name="lastname" value="{{$users->lastname}}">
+                
             </div>
 
             @if($errors-> has('lastname'))
@@ -57,7 +57,7 @@
 
             <div class="form-group ">
                 <label for="inputProduct">Pseudo</label>
-                <input type="text" class="form-control" id="inputplace" name="code" value="{{$users->pseudo}}">
+                <input type="text" class="form-control" id="inputplace" name="pseudo" value="{{$users->pseudo}}">
             </div>
 
             @if($errors-> has('pseudo'))
