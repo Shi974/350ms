@@ -10,6 +10,13 @@ body {
     transform: rotate(10deg);
 }
 
+.carousel-inner img {
+    
+    width: auto;
+    height: auto;
+
+  }
+
 .odometer {
     color: #ea0001;
 }

@@ -34,6 +34,44 @@
 
        
     </div>
+
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/rl.png" alt="Rocket League" width="500" height="500">
+      <div class="carousel-caption">
+        <h5>Rocket League</h5>
+        <p>Omedeto !</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="/images/t7.png" alt="Tekken 7" width="500" height="500">
+      <div class="carousel-caption">
+        <h5>Tekken 7</h5>
+        <p>READY TO FIGHT!</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="/images/sc.png" alt="Soul Calibur" width="500" height="500">
+      <div class="carousel-caption">
+        <h5>Soul Calibur </h5>
+        <p>Prepare your sword ! </p>
+      </div>   
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
     <script src='http://github.hubspot.com/odometer/odometer.js'></script>
     <script>
         function myFunction() {
@@ -45,4 +83,6 @@
         }
 
     </script>
+
+    
     @endsection
