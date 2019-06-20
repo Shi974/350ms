@@ -62,6 +62,15 @@ h4 {
     color: #0972c9 !important;
 }
 
+h5 {
+
+    color:#0972c9 !important;
+}
+
+#avatar p{
+    color:white !important;
+}
+
 .intro {
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
@@ -177,6 +186,12 @@ img {
     color:whitesmoke;
 }
 
+.text-center p{
+    color:whitesmoke;
+    font-size:25px;
+}
+
+
 .content {
     padding-right:100px;
 }
@@ -200,10 +215,8 @@ img {
     margin-right: 5px;
 }
 
-.liste{
-color:White !important;
 
-}
+
 /* FOOTER */
 
 footer {
@@ -318,6 +331,12 @@ input {
         font-size: 1.5em;
         text-align: left !important;
     }
+
+     /* PROFIL USER */
+    #profil .flex-row{
+        flex-direction: column !important;
+
+    }
 }
 
 /* RESPONSIVE MD */
@@ -326,3 +345,16 @@ input {
         background: black;
     }
 }
+
+/* TITRE EFFET JS*/
+.titreJS{
+    /* padding-top:50px; */
+
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
+.titreJS .letter{
+    display: inline-block;
+    line-height: 1em;
+  }

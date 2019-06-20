@@ -2,61 +2,49 @@
 
 @section('content')
 
-<div class="profil text-center">
 
-    <h3>Page Profil de {{ $users->pseudo }}</h3>
-    <img src="/storage/{{ auth()->user()->avatar }}" alt="avatar"> 
-
+<div class="text-center text-justify">
+    <h3>Votre page profil</h3>
 </div>
 
 
-<div class="container row d-flex justify-content-around align-items-center">
+<div class="text-center align-items-center">
 
-    <div class="contenu">
+    <h4 class="titreJS"> Game on {{ $users->pseudo }} !<h4>
+            <img src="/storage/{{ auth()->user()->avatar }}" alt="avatar">
+</div>
 
-        <div class="text-center">
-            
-            <h5 class="liste">Prenom :</h5> <h4 class="font-weight-bold"> {{ $users->firstname }}</h4>
 
-            <h5 class="liste">Nom :</h5> <h4 class="font-weight-bold">{{ $users->lastname }}</h4>
 
-            <h5 class="liste">Email :</h5> <h4 class="font-weight-bold"> {{ $users->email }}</h4>
 
-            <h5 class="liste">Téléphone : </h5> <h4 class="font-weight-bold">{{ $users->phone }}</h4>
+<div class="container" id="profil">
 
-            <h5 class="liste">Pseudo : </h5> <h4 class="font-weight-bold">{{ $users->pseudo }}</h4>
-
+    <div class="d-flex flex-row bd-highlight justify-content-around">
+        <div class="infos text-center border-light p-5 mb-5 rounded ">
+            <h5 class="liste">Prenom :</h5>
+            <p class="font-weight-bold"> {{ $users->firstname }}</p>
+            <h5 class="liste">Nom :</h5>
+            <p class="font-weight-bold">{{ $users->lastname }}</p>
         </div>
 
-        <div class="modif text-center">
-            <a href="/profil/edit/{{$users->id}}" role="button" class=" btn btn-outline-success">Modifier<a>
+        <div class="modif text-center align-self-center">
+            <a href="/profil/edit/{{$users->id}}" role="button" class=" btn btn-outline-success">Modifier mes
+                informations<a>
         </div>
 
-    </div>
 
-
-
-    
-    <div class="addAvatar">
-    
-        <form class="section" action="/ajout_avatar" method="post" enctype="multipart/form-data">
-            @csrf
-
-            <div class="field">
-                <label class="label"> Ajouter/Modifier mon avatar : </label>
-                <div class="control">
-                    <input class="input" type="file" name="avatar">
-                </div>
-            </div>
-
-            <div class="field">
-                <div class="control">
-                    <button class="btn btn-outline-success" type="submit">Ajouter avatar</button>
-                </div>
-            </div>
-        </form>
-
+        <div class="infos text-center border-light p-5 mb-5 rounded ">
+            <h5 class="liste">Email :</h5>
+            <p class="font-weight-bold"> {{ $users->email }}</p>
+            <h5 class="liste">Téléphone : </h5>
+            <p class="font-weight-bold">{{ $users->phone }}</p>
+        </div>
     </div>
 </div>
+
+
+
+
+
 
 @endsection

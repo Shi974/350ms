@@ -7,29 +7,29 @@
 
     <div class="col-12 d-flex justify-content-center ">
         <form class="formulaire" action="/profil/update/{{ $users->id }}" method="post">
-        @csrf
-        @method('PATCH')
+            @csrf
+            @method('PATCH')
 
-        <div class="form-group ">
+            <div class="form-group ">
                 <label for="inputProduct">Prenom</label>
                 <input type="text" class="form-control" id="inputprenom" name="prenom" value="{{$users->firstname}}">
             </div>
 
             @if($errors-> has('firstname'))
-            <span class="bg-danger" role="alert"> 
-            <strong> {{ $errors->first('firstname')}}</strong>
+            <span class="bg-danger" role="alert">
+                <strong> {{ $errors->first('firstname')}}</strong>
             </span>
             @endif
 
             <div class="form-group ">
                 <label for="inputFamily" name="family">Nom</label>
                 <input type="text" class="form-control" id="inputName" name="nom" value="{{$users->lastname}}">
-                
+
             </div>
-            
+
             @if($errors-> has('lastname'))
-            <span class="bg-danger" role="alert"> 
-            <strong> {{ $errors->first('lastname')}}</strong>
+            <span class="bg-danger" role="alert">
+                <strong> {{ $errors->first('lastname')}}</strong>
             </span>
             @endif
 
@@ -39,60 +39,57 @@
             </div>
 
             @if($errors-> has('email'))
-            <span class="bg-danger" role="alert"> 
-            <strong> {{ $errors->first('email')}}</strong>
+            <span class="bg-danger" role="alert">
+                <strong> {{ $errors->first('email')}}</strong>
             </span>
             @endif
-            
+
             <div class="form-group ">
                 <label for="inputProduct">Téléphone</label>
                 <input type="text" class="form-control" id="inputplace" name="phone" value="{{$users->phone}}">
             </div>
 
             @if($errors-> has('phone'))
-            <span class="bg-danger" role="alert"> 
-            <strong> {{ $errors->first('phone')}}</strong>
+            <span class="bg-danger" role="alert">
+                <strong> {{ $errors->first('phone')}}</strong>
             </span>
             @endif
 
             <div class="form-group ">
                 <label for="inputProduct">Pseudo</label>
-                <input type="text" class="form-control" id="inputplace" name="code" value="{{$users->code}}">
+                <input type="text" class="form-control" id="inputplace" name="code" value="{{$users->pseudo}}">
             </div>
 
             @if($errors-> has('pseudo'))
-            <span class="bg-danger" role="alert"> 
-            <strong> {{ $errors->first('pseudo')}}</strong>
+            <span class="bg-danger" role="alert">
+                <strong> {{ $errors->first('pseudo')}}</strong>
             </span>
             @endif
 
-          
-            
-           
 
-            <button type="submit" class="btn btn-dark">Modifier</button>
+
+
+
+            <button type="submit" class="btn btn-outline-success">Modifier</button>
 
         </form>
     </div>
 </div>
 
-<div class="addAvatar">
-        <form class="section" action="/ajout_avatar" method="post" enctype="multipart/form-data">
-            @csrf
 
-            <div class="field">
-                <label class="label"> Ajouter/Modifier mon avatar : </label>
-                <div class="control">
-                    <input class="input" type="file" name="avatar">
-                </div>
-            </div>
+<div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
 
-            <div class="field">
-                <div class="control">
-                    <button class="btn btn-outline-success" type="submit">Ajouter avatar</button>
-                </div>
-            </div>
-        </form>
+    <form class="section" action="/ajout_avatar" method="post" enctype="multipart/form-data">
+        @csrf
+        <div class="mb-auto p-2 bd-highlight"><label class="label"> Ajouter/Modifier mon avatar : </label></div>
+        <div class="p-2 bd-highlight" id="avatar">
+            <p> Choisir une image : <input class="input" type="file" name="avatar" disabled> </p>
+        </div>
+        <div class="p-2 bd-highlight"> <button class="btn btn-outline-success" type="submit">Ajouter avatar</button>
+        </div>
+    </form>
+</div>
+
 
 
 @endsection
