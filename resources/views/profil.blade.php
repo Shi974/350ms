@@ -1,6 +1,5 @@
 @extends('layouts.main')
 
-
 @section('content')
 
 <div class="profil text-center">
@@ -9,7 +8,6 @@
     <img src="/storage/{{ auth()->user()->avatar }}" alt="avatar"> 
 
 </div>
-
 
 
 <div class="container row d-flex justify-content-around align-items-center">
@@ -30,16 +28,15 @@
 
         </div>
 
-
-
         <div class="modif text-center">
-            <a href="/user/edit/{{}}" role="button" class=" btn btn-outline-success">Modifier<a>
+            <a href="/profil/edit/{{$users->id}}" role="button" class=" btn btn-outline-success">Modifier<a>
         </div>
 
     </div>
 
 
 
+    
     <div class="addAvatar">
     
         <form class="section" action="/ajout_avatar" method="post" enctype="multipart/form-data">
@@ -61,8 +58,5 @@
 
     </div>
 </div>
-
-
-
 
 @endsection

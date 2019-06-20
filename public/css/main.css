@@ -1,19 +1,44 @@
+/* html * {
+    border: 1px solid greenyellow;
+}  */
+
 body {
     background-color: #000000 !important;
     min-height: 100vh !important;
 }
 
+/* PAGE WELCOME */
+#gb {
+    border: none !important;
+    image-orientation: -90deg;
+    transform: rotate(10deg);
+}
+
+.odometer {
+    color: #ea0001;
+}
+
+.underline{
+    /* width: 50%;
+    height: 3px;
+    border-bottom: 3px solid rgb(239,126,96); */
+    width: 50%;
+    margin: 0px auto;
+    height: 3px;
+    border-bottom: 3px solid #ea0001; 
+}
+
 .banner {
-    /* border: 2px solid #ea0001; */
     width: 100%;
-    height: 20%;
     background-image: url("/images/bg.jpg");
     background-position: center;
 }
 
 .logo {
-    width: 5%;
-    height: 35%;
+    width: auto;
+    height: auto;
+    max-width: 180px;
+    max-height: 180px;
 }
 
 h1 {
@@ -61,6 +86,7 @@ nav {
     background-color: #000000;
     margin-top: 2vh !important;
     margin-bottom: 5vh !important;
+    border-bottom: 2px solid #0972c9;
 }
 
 .nav-link {
@@ -88,6 +114,14 @@ nav .btn-outline-primary {
 
 nav .btn-outline-primary a:hover {
     color: black !important;
+}
+
+.navbar-toggler {
+    color: #ea0001 !important;
+}
+
+.headresp {
+    font-size: 1.2em;
 }
 
 .liste {
@@ -137,18 +171,17 @@ article .btn {
 img {
     widows: 200px;
     height:200px;
-    border: 2px solid whitesmoke !important
 }
 
-.text-center{
+.text-center {
     color:whitesmoke;
 }
 
-.content{
+.content {
     padding-right:100px;
 }
 
-.label{
+.label {
     font-size:20px;
 }
 
@@ -164,12 +197,14 @@ img {
 
 .fas {
     font-size: 30px;
+    margin-right: 5px;
 }
 
 .liste{
 color:White !important;
 
 }
+/* FOOTER */
 
 footer {
     margin-top: 5vh !important;
@@ -213,30 +248,46 @@ input {
     font-family: 'Comfortaa', cursive;
 }
 
+/* PAGE EVENT - ID - USERS */
+#event_id .d-flex {
+    font-size: 1.5em;
+    justify-content: center;
+    color: white;
+}
+
+#event_id .d-flex img {
+    margin-right: 5vw !important;
+}
+
+#event_id .d-flex span {
+    color: #0972c9 !important;
+}
+
+#event_id p {
+    font-size: 1.5em;
+}
+
+#event_id p span {
+    color: #0972c9 !important;
+}
+
+/* PAGE SUGGESTIONS - USERS */
+#suggestions .card-header {
+    flex-direction: column !important;
+}
+
+#suggestions #alert {
+    font-size: 0.6em;
+    border-radius: 5px;
+}
+
 /* CLASSE POUR FAIRE FONCTIONNER MA FONCTION JQUERY */
 .img_hover {
     transform: scale(1.5);
 }
 
-/* ADMIN */
-
 /* RESPONSIVE */
 @media all and (max-width: 415px) {
-    /* NAV */
-    /* .navbrand-logo {
-        min-height: 50px;
-        min-width: 50px;
-    } */
-
-    /* nav .nav-item {
-        display: flex;
-    } */
-
-    .navbar-toggler {
-        color: #ea0001 !important;
-        border: 2px solid white;
-    }
-
     .mx-auto {
         text-align: center !important;
     }
@@ -249,5 +300,29 @@ input {
 
     .resp button {
         margin-bottom: 2vh !important;
+    }
+
+    /* EVENT ID - USERS */
+    #event_id .d-flex {
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #event_id img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #event_id p {
+        font-size: 1.5em;
+        text-align: left !important;
+    }
+}
+
+/* RESPONSIVE MD */
+@media all and (max-width: 980px) {
+    .banner {
+        background: black;
     }
 }

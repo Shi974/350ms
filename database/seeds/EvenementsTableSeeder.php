@@ -17,7 +17,7 @@ class EvenementsTableSeeder extends Seeder
         $event->date = "2019-07-15";
         $event->horaire_debut = "10:30:00";
         $event->duree = "3 heures";
-        $event->lieu = "Serveur Discord : [974]Game On";
+        $event->lieu = "Serveur Discord : [974] Game On";
         $event->nb_place = 12;
         $event->nb_place_reserve = 3;
         $event->fin_inscription = "2019-07-12";

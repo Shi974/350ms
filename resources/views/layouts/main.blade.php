@@ -30,23 +30,26 @@
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/">Accueil </a>
+                        <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/"><i class="fas fa-home"></i>Accueil </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/events">Evènements</a>
+                        <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/events"> <i class="fas fa-calendar-check"></i>Evènements</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link font-weight-bold" style="font-size: 20px;"
-                            href="/suggestions">Suggestions</a>
+                            href="/suggestions"><i class="fas fa-file-signature"></i>Suggestions</a>
                     </li>
                 </ul>
             </div>
 
             <div class="mx-auto order-0">
-                <li class="nav-item active">
+                <li class="nav-item active">        
                     <!-- <img src="/images/logo.png" class="logo navbrand-logo" alt="logo"> -->
-                    <p class="d-md-block d-lg-none">350ms Klub | GDK concept</p>
+                    <p class="d-md-block d-lg-none headresp">350ms Klub | GDK concept</p>
                 </li>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                    <span class="navbar-toggler-icon"><i class="fas fa-angle-double-down"></i></span>
+                </button>
             {{-- ELEMENTS NAV APPARAISSANT QU À L ADMIN --}}
             @auth
                 @if (Auth::User() -> hasRole("Admin"))
@@ -55,10 +58,7 @@
                             Page d'Administration</a>
                     </li>
                 @endif
-            @endauth
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                    <span class="navbar-toggler-icon"><i class="fas fa-angle-double-down"></i></span>
-                </button>
+            @endauth          
             </div>
 
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">

@@ -1,17 +1,23 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="text-center">
-<h2>Nombre de tournoi organisés:</h2>
-<div id='odometer' class='odometer'>0</div>
+<div class="d-flex text-center justify-content-arround p-0 m-0">
+    <div class="col-sm">
+        <div id='nbTournois' class='odometer display-2'>0</div>
+        <h3>Tournoi organisés à la Réunion</h3>
+        <div class="underline"></div>
+    </div>
+    <div class=" col-sm">
+        <div id='nbgagant' class='odometer display-2'>0</div>
+        <h3>Récompenses à gagner</h3>
+        <div class="underline"></div>
+    </div>
+    <div class=" col-sm">
+        <div id='nbParticipants' class='odometer display-2'>0</div>
+        <h3>Participants au 350ms Klub:</h3>
+        <div class="underline"></div>
+    </div>
 </div>
-<style>
-    .odometer {
-        font-size: 100px;
-        color: red;
-    }
-</style>
-
 <div class="container">
     <div class="text-center text-justify">
         <h3>Welcome</h3>
@@ -19,7 +25,7 @@
 
     <div class="intro text-justify">
 
-        <h3>Qui sont les GDK ? </h3>
+        <h4>Qui sont les GDK ? </h4>
         <p>Hinc ille commotus ut iniusta perferens et indigna praefecti custodiam protectoribus mandaverat fidis.
             quo conperto Montius tunc quaestor acer quidem sed ad lenitatem propensior. </p>
 
@@ -39,11 +45,11 @@
     <script>
         function myFunction() {
             setTimeout(function () {
-                odometer.innerHTML = 34;
+                nbTournois.innerHTML = 149;
+                nbParticipants.innerHTML = 1342;
+                nbgagant.innerHTML = 100;
             }, );
         }
 
     </script>
     @endsection
-
-    </html>
