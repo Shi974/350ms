@@ -1,36 +1,42 @@
 @extends('layouts.main')
 
 @section('content')
-
+<!-- 
 <div class="d-flex text-center justify-content-between p-0 m-0">
     <div>
-        <div id='nbTournois' class='odometer'>0</div>
+        <h1><div id='nbTournois' class='odometer display-2'>0</div>
         <h2>Tournoi organisés à la Réunion</h2>
     </div>
 
-    <div >
-        <div id='nbgagant' class='odometer'>0</div>
-            <h2>Récompenses à gagner</h2>
+    <div>
+        <div id='nbgagant' class='odometer display-2'>0</div>
+        <h2>Récompenses à gagner</h2>
     </div>
 
     <div>
-            <div id='nbParticipants' class='odometer'>0</div>
-            <h2>Joueurs participants au 350ms Klub:</h2>
-        </div>
+        <div id='nbParticipants' class='odometer display-2'>0</div>
+        <h2>Joueurs participants au 350ms Klub:</h2>
     </div>
+    </div>
+</div> --><div class="d-flex text-center justify-content-arround  ">
+        <div class="col-sm">
+            <div id='nbTournois' class='odometer display-2'>0</div>
+            <h2 >Tournoi organisés à la Réunion</h2>
+            <div class="underline"></div>
+        </div>
+        <div class=" col-sm">
+            <div id='nbgagant' class='odometer display-2'>0</div>
+            <h2>Récompenses à gagner</h2>
+            <div class="underline"></div>
+        </div>
+        <div class=" col-sm">
+            <div id='nbParticipants' class='odometer display-2'>0</div>
+            <h2>Participants au 350ms Klub:</h2>
+            <div class="underline"></div>
+        </div>
 
-
-
-
-</div>
-<style>
-    .odometer {
-        font-size: 100px;
-        color: red;
-    }
-
-</style>
-
+        
+    </div>
 <div class="container">
     <div class="text-center text-justify">
         <h3>Welcome</h3>

@@ -1,6 +1,31 @@
+/* html * {
+    border: 1px solid greenyellow;
+}  */
+
 body {
     background-color: #000000 !important;
     min-height: 100vh !important;
+}
+
+/* PAGE WELCOME */
+#gb {
+    border: none !important;
+    image-orientation: -90deg;
+    transform: rotate(10deg);
+}
+
+.odometer {
+    color: #ea0001;
+}
+
+.underline{
+    /* width: 50%;
+    height: 3px;
+    border-bottom: 3px solid rgb(239,126,96); */
+    width: 50%;
+    margin: 0px auto;
+    height: 3px;
+    border-bottom: 3px solid #ea0001; 
 }
 
 .banner {
@@ -62,6 +87,7 @@ nav {
     background-color: #000000;
     margin-top: 2vh !important;
     margin-bottom: 5vh !important;
+    border-bottom: 2px solid #0972c9;
 }
 
 .nav-link {
@@ -165,6 +191,7 @@ img {
 
 .fas {
     font-size: 30px;
+    margin-right: 5px;
 }
 
 footer {

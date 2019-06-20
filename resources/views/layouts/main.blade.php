@@ -30,14 +30,14 @@
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/">Accueil </a>
+                        <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/"><i class="fas fa-home"></i>Accueil </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/events">Evènements</a>
+                        <a class="nav-link font-weight-bold" style="font-size: 20px;" href="/events"> <i class="fas fa-calendar-check"></i>Evènements</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link font-weight-bold" style="font-size: 20px;"
-                            href="/suggestions">Suggestions</a>
+                            href="/suggestions"><i class="fas fa-file-signature"></i>Suggestions</a>
                     </li>
                 </ul>
             </div>
