@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/no_access', function () {
+    return view('no_access');
+});
+
+// ---------------------------------------
+
+// PAGES PROFIL
+
 Route::get('/profil', 'ProfilController@profil');//profil utilisateur
 
 Route::get('/profil/edit/{id}', 'ProfilController@edit');//route bouton modifier
@@ -30,27 +38,48 @@ Route::get('/events', 'EventsController@indexEvent');
 // ---------------------------------------
 
 // PAGE ADMIN
-Route::get('/admin', function () {
-    return view('admin.admin');
-});
+// Route::get('/admin', function () {
+//     return view('admin.admin');
+// });
+
+Route::get('/admin', ['uses' => 'HomeController@adminPage',
+                    'middleware' => 'roles',
+                    'roles' => ['Admin']
+]);
 
 // ---------------------------------------
-// PAGE EVÈNEMENTS - CRUD
+// PAGE EVÈNEMENTS - CRUD - PROTEGEES --> NEED ADMIN
 // READ
-Route::get('/admin/events', 'EventsController@indexAllEvents');
+Route::get('/admin/events', ['uses' => 'EventsController@indexAllEvents',
+                            'middleware' => 'roles',
+                            'roles' => ['Admin']
+]);
 
 // CREATE
-Route::get('/admin/events/new', 'EventsController@create');
+Route::get('/admin/events/new', ['uses' => 'EventsController@create',
+                                'middleware' => 'roles',
+                                'roles' => ['Admin']
+]);
+
 Route::post('/admin/events/store','EventsController@store');
 
 //EDIT
-Route::get('/admin/events/edit/{id}', 'EventsController@edit');
+Route::get('/admin/events/edit/{id}', [ 'uses' => 'EventsController@edit',
+                                        'middleware' => 'roles',
+                                        'roles' => ['Admin']
+]);
 
 //UPDATE
-Route::post('/admin/events/update/{id}', 'EventsController@update');
+Route::get('/admin/events/edit/{id}', [ 'uses' => 'EventsController@edit',
+                                        'middleware' => 'roles',
+                                        'roles' => ['Admin']
+]);
 
 // DELETE
-Route::get('/admin/events/delete/{id}', 'EventsController@destroy');
+Route::get('/admin/events/delete/{id}', ['uses' => 'EventsController@destroy',
+                                        'middleware' => 'roles',
+                                        'roles' => ['Admin']
+]);
 
 // ---------------------------------------
 
@@ -63,12 +92,18 @@ Route::get('/suggestions', 'SuggestionsController@form');
 Route::post('/suggestions/create', 'SuggestionsController@store');
 
 //READ ( ADMIN )
-Route::get('/admin/suggestions', 'SuggestionsController@read');
+Route::get('/admin/suggestions', ['uses' =>  'SuggestionsController@read',
+                                'middleware' => 'roles',
+                                'roles' => ['Admin']
+]);
 
 //UPDATE ???
 
 //DELETE ( ADMIN )
-Route::get('/suggestions/destroy/{id}', 'SuggestionsController@destroy');
+Route::get('/suggestions/destroy/{id}', ['uses' => 'SuggestionsController@destroy',
+                                        'middleware' => 'roles',
+                                        'roles' => ['Admin']
+]);
 
 // ---------------------------------------
 
