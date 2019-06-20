@@ -6,14 +6,14 @@
 <div class="profil text-center">
 
     <h3>Page Profil de {{ $users->pseudo }}</h3>
-    <img src="/avatars/1.jpg" alt="avatar">
-    <!-- <img src="/avatars/{{ auth()->user()->avatar }}" alt="avatar"> -->
+    <img src="/storage/{{ auth()->user()->avatar }}" alt="avatar"> 
 
 </div>
 
 
 
 <div class="container row d-flex justify-content-around align-items-center">
+
     <div class="contenu">
 
         <div class="text-center">
@@ -35,8 +35,13 @@
         <div class="modif text-center">
             <a href="/user/edit/{{}}" role="button" class=" btn btn-outline-success">Modifier<a>
         </div>
+
     </div>
+
+
+
     <div class="addAvatar">
+    
         <form class="section" action="/ajout_avatar" method="post" enctype="multipart/form-data">
             @csrf
 
