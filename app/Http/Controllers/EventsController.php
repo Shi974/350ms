@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Evenement;
+use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class EventsController extends Controller
 {
@@ -103,7 +105,22 @@ class EventsController extends Controller
         return view('idEvent', ['event'=>$event]);
     }
 
+    public function  inscri_event ($id){
+        $user = Auth::user()->id;
     
+        User::find($user)->evenements()->attach($id);
 
+        //dd(User::find($user));
 
+        return redirect()->action("EventsController@indexEvent");
+    }
+   
+
+    public function delete_event($id){
+        $user = Auth::user()->id;
+    
+        User::find($user)->evenements()->detach($id);
+        //dd($user);
+        return redirect()->action("EventsController@indexEvent");
+    }
 }

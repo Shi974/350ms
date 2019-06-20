@@ -78,3 +78,10 @@ Route::post('/ajout_avatar', 'ProfilController@ajoutAvatar');
 
 //RETRIEVE EVENT BY ID - USER
 Route::get('/events/details/{id}', 'EventsController@singleIndex');
+
+Route::get('/inscription/event/{id}', 'EventsController@inscri_event');
+
+//DETACH
+Route::get('/inscription/delete/{id}', 'EventsController@delete_event');
+//! Fonction pour inscrire l'utilisateur dans un evenement
+

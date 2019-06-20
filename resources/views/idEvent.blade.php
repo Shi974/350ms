@@ -3,7 +3,11 @@
 @section('content')
 
 <div clas="container" id="event_id">
-
+                @if(session()->has('notification.message'))
+                    <div class="alert alert-{{session('notification.type')}}">
+                        {{session('notification.message')}}
+                    </div>
+                @endif
     <div class="text-center text-justify">
         <h3> Tournoi {{ $event->jeu }} </h3>
     </div>
@@ -32,7 +36,7 @@
         </p>
         
         <div class="d-flex justify-content-end">
-            <a href="idEvent/{{ $event->id }}" class="btn btn-outline-danger font-weight-bold"g
+            <a href="/inscription/event/{{ $event->id }}" class="btn btn-outline-danger font-weight-bold"g
                 aria-label="Lire davantage sur ce sujet">
                 s'inscrire
             </a>
