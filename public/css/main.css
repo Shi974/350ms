@@ -394,3 +394,14 @@ input {
         margin-top: 5px !important;
     }
 }
+
+/* RESPONSIVE H3 768px */
+@media all and (max-width: 768px) {
+    .jumbotron h3, .far {
+        font-size: 2em !important;
+    }
+
+    #events_users .far {
+        display: none !important;
+    }
+}
