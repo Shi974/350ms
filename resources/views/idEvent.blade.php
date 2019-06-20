@@ -35,7 +35,7 @@
         <div class="d-flex justify-content-around">
             <a href="/inscription/event/{{ $event->id }}" class="btn btn-outline-success font-weight-bold"g
                 aria-label="Lire davantage sur ce sujet">
-                s'inscrire
+                S'inscrire
             </a>
         </div>
 

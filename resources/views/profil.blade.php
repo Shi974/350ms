@@ -11,7 +11,8 @@
 <div class="text-center align-items-center">
 
     <h4 class="titreJS"> Game on {{ $users->pseudo }} !<h4>
-            <img src="/storage/{{ auth()->user()->avatar }}" alt="avatar">
+            <!-- <img src="/storage/{{ auth()->user()->avatar }}" alt="avatar"> -->
+            <img src="/images/user.png" alt="avatar">
 </div>
 
 

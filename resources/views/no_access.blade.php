@@ -11,7 +11,7 @@
 <hr>
 
 <div class="row justify-content-md-center">
-    <a href="/welcome"><button type="button" class="btn btn-primary">Retourner à l'accueil</button></a>
+    <a href="/"><button type="button" class="btn btn-primary">Retourner à l'accueil</button></a>
 </div>
 
 @stop
