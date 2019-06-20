@@ -375,14 +375,14 @@ input {
         flex-direction: column !important;
     }
 
-    #welcome .justify-content-around h3, .odometer {
-        font-size: 20px !important;
+    #welcome .justify-content-around h3  {
+        font-size: 1.4em !important;
     }
 
-    #welcome .justify-content-around .odometer {
-        font-size: 25px !important;
+    #welcome .odometer {
+        font-size: 2.2em !important;
+        margin-top: 5px;
     }
-
 
     #events_users .flex-row {
         flex-direction: column !important;
