@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
         $user->firstname = "Admin";
         $user->lastname = "Admin";
         $user->email = "admin@mail.com";
-        $user->password = '$2y$10$pzWLzd/d4j3UIrs3n7SThOXeszVdep.j/cf2XvqmCuOq.1Jty/LBq';
+        $user->password = '$2y$10$pzWLzd/d4j3UIrs3n7SThOXeszVdep.j/cf2XvqmCuOq.1Jty/LBq'; //password
         $user->phone = "0692010203";
         $user->pseudo = "Admin";
         $user->save();
@@ -32,7 +32,7 @@ class UsersTableSeeder extends Seeder
         $user->firstname = "Joséphine";
         $user->lastname = "Ange";
         $user->email = "jo@mail.com";
-        $user->password = '$2y$10$FxnOB5NzRj/62oeCVJZ93OHE2xAvVhmzvXqlaomej/VqBpb43qjMy';
+        $user->password = '$2y$10$FxnOB5NzRj/62oeCVJZ93OHE2xAvVhmzvXqlaomej/VqBpb43qjMy'; //josephine
         $user->phone = "0692010204";
         $user->pseudo = "Jo974";
         $user->save();

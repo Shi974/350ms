@@ -6,7 +6,8 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-center">
-                    <h3>{{ __("Faites vos suggestions") }}</h3>
+                    <h3>Une idée de tournoi ? Du PVP ? Envie de proposer des nouveaux jeux ?</h3>
+                    <h3>{{ __("Faites vos suggestions !") }}</h3>            
 
                     @guest
                     <span href="login" class="text-center list-group-item-action list-group-item-danger p-2 w-50" id="alert">
