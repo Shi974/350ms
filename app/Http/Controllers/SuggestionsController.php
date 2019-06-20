@@ -36,7 +36,7 @@ class SuggestionsController extends Controller
     public function read() {
         //d(Suggestion::get());
         $suggestions = Suggestion::get();
-        return view("suggestions",["suggestions"=> $suggestions]);
+        return view("admin.suggestions",["suggestions"=> $suggestions]);
     }
 
     // DESTROY SUGGESTION -----------------------------

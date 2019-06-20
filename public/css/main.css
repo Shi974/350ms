@@ -200,6 +200,8 @@ img {
     margin-right: 5px;
 }
 
+/* FOOTER */
+
 footer {
     margin-top: 5vh !important;
     text-align: center;
@@ -263,6 +265,16 @@ input {
 
 #event_id p span {
     color: #0972c9 !important;
+}
+
+/* PAGE SUGGESTIONS - USERS */
+#suggestions .card-header {
+    flex-direction: column !important;
+}
+
+#suggestions #alert {
+    font-size: 0.6em;
+    border-radius: 5px;
 }
 
 /* CLASSE POUR FAIRE FONCTIONNER MA FONCTION JQUERY */
