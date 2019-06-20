@@ -18,10 +18,10 @@
                     <!-- -------- -->
                 </h4>
 
-                <div class="d-flex flex-row justify-content-aroun w-100">
+                <div class="d-flex flex-row justify-content-around w-100">
 
                 
-                    <figure style="width:20%" class="w-25">
+                    <figure>
                         <img src="/images/{{ $event->image }}" alt="Jaquette de {{ $event->jeu }}" 
                         title="Jaquette de {{ $event->jeu }}"/>
                     </figure>

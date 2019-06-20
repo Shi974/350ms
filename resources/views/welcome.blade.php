@@ -24,6 +24,8 @@
         <i class="fas fa-gamepad text-primary" alt=""></i></h3>
     </div>
 
+    <br />
+
     <div class="intro text-justify">
 
         <h4><i class="fas fa-headset" alt=""></i> Qui sont les GDK ? </h4>
