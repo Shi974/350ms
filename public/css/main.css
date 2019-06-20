@@ -4,7 +4,6 @@ body {
 }
 
 .banner {
-    /* border: 2px solid #ea0001; */
     width: 100%;
     background-image: url("/images/bg.jpg");
     background-position: center;
@@ -91,6 +90,14 @@ nav .btn-outline-primary a:hover {
     color: black !important;
 }
 
+.navbar-toggler {
+    color: #ea0001 !important;
+}
+
+.headresp {
+    font-size: 1.2em;
+}
+
 .liste {
     font-family: 'Comfortaa', cursive;
     color: #ea0001;
@@ -138,18 +145,17 @@ article .btn {
 img {
     widows: 200px;
     height:200px;
-    border: 2px solid whitesmoke !important
 }
 
-.text-center{
+.text-center {
     color:whitesmoke;
 }
 
-.content{
+.content {
     padding-right:100px;
 }
 
-.label{
+.label {
     font-size:20px;
 }
 
@@ -237,25 +243,8 @@ input {
     transform: scale(1.5);
 }
 
-/* ADMIN */
-
 /* RESPONSIVE */
 @media all and (max-width: 415px) {
-    /* NAV */
-    /* .navbrand-logo {
-        min-height: 50px;
-        min-width: 50px;
-    } */
-
-    /* nav .nav-item {
-        display: flex;
-    } */
-
-    .navbar-toggler {
-        color: #ea0001 !important;
-        border: 2px solid white;
-    }
-
     .mx-auto {
         text-align: center !important;
     }
@@ -285,5 +274,12 @@ input {
     #event_id p {
         font-size: 1.5em;
         text-align: left !important;
+    }
+}
+
+/* RESPONSIVE MD */
+@media all and (max-width: 980px) {
+    .banner {
+        background: black;
     }
 }

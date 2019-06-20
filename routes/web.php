@@ -15,11 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-//  Route::get('/profil', function () {
-//     return view('profil');
-// });
-
 Route::get('/profil', 'ProfilController@profil');//profil utilisateur
 
 Route::get('/profil/edit/{id}', 'ProfilController@edit');//route bouton modifier

@@ -2,34 +2,22 @@
 
 @section('content')
 
-<div class="d-flex text-center justify-content-between p-0 m-0">
+<div class="d-flex text-center justify-content-around p-0 m-0">
     <div>
         <div id='nbTournois' class='odometer'>0</div>
-        <h2>Tournoi organisés à la Réunion</h2>
+        <h3>Tournois organisés à la Réunion</h3>
     </div>
 
     <div >
         <div id='nbgagant' class='odometer'>0</div>
-            <h2>Récompenses à gagner</h2>
+        <h3>Récompenses gagnées</h3>
     </div>
 
     <div>
-            <div id='nbParticipants' class='odometer'>0</div>
-            <h2>Joueurs participants au 350ms Klub:</h2>
-        </div>
+        <div id='nbParticipants' class='odometer'>0</div>
+        <h3>Joueurs participants</h3>
     </div>
-
-
-
-
 </div>
-<style>
-    .odometer {
-        font-size: 100px;
-        color: red;
-    }
-
-</style>
 
 <div class="container">
     <div class="text-center text-justify">
@@ -38,7 +26,7 @@
 
     <div class="intro text-justify">
 
-        <h3>Qui sont les GDK ? </h3>
+        <h4>Qui sont les GDK ? </h4>
         <p>Hinc ille commotus ut iniusta perferens et indigna praefecti custodiam protectoribus mandaverat fidis.
             quo conperto Montius tunc quaestor acer quidem sed ad lenitatem propensior. </p>
 
@@ -63,8 +51,5 @@
                 nbgagant.innerHTML = 100;
             }, );
         }
-
     </script>
     @endsection
-
-    </html>

@@ -43,10 +43,13 @@
             </div>
 
             <div class="mx-auto order-0">
-                <li class="nav-item active">
+                <li class="nav-item active">        
                     <!-- <img src="/images/logo.png" class="logo navbrand-logo" alt="logo"> -->
-                    <p class="d-md-block d-lg-none">350ms Klub | GDK concept</p>
+                    <p class="d-md-block d-lg-none headresp">350ms Klub | GDK concept</p>
                 </li>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                    <span class="navbar-toggler-icon"><i class="fas fa-angle-double-down"></i></span>
+                </button>
             {{-- ELEMENTS NAV APPARAISSANT QU À L ADMIN --}}
             @auth
                 @if (Auth::User() -> hasRole("Admin"))
@@ -55,10 +58,7 @@
                             Page d'Administration</a>
                     </li>
                 @endif
-            @endauth
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                    <span class="navbar-toggler-icon"><i class="fas fa-angle-double-down"></i></span>
-                </button>
+            @endauth          
             </div>
 
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
