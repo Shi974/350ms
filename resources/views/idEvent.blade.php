@@ -32,8 +32,8 @@
                 <strong>Tarif d'entrée</strong> :  <span>@if( $event->prix == null) aucun @else {{ $event->prix }} € @endif</span> <br />
         </p>
         
-        <div class="d-flex justify-content-end">
-            <a href="/inscription/event/{{ $event->id }}" class="btn btn-outline-danger font-weight-bold"g
+        <div class="d-flex justify-content-around">
+            <a href="/inscription/event/{{ $event->id }}" class="btn btn-outline-success font-weight-bold"g
                 aria-label="Lire davantage sur ce sujet">
                 s'inscrire
             </a>

@@ -250,6 +250,10 @@ input {
     font-family: 'Comfortaa', cursive;
 }
 
+#events_users .far {
+    font-size: 3.5rem !important;
+}
+
 /* PAGE EVENT - ID - USERS */
 #event_id .d-flex img {
     max-width: 200px;
@@ -276,6 +280,11 @@ input {
 #suggestions #alert {
     font-size: 0.6em;
     border-radius: 5px;
+}
+
+/* PAGE VALIDATION SUGGESTION */
+#no_access .fas {
+    font-size: 3.5rem !important;
 }
 
 /* CLASSE POUR FAIRE FONCTIONNER MA FONCTION JQUERY */
@@ -335,9 +344,9 @@ input {
         align-items: center !important;
     }
 
-    #events_users .justify-content-end {
+    /* #events_users .justify-content-around {
         justify-content: center !important;
-    }
+    } */
 
     article .btn { 
         width: 50%;

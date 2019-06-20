@@ -4,7 +4,7 @@
 
 <div class="jumbotron bg-transparent text-white rounded-0" id="no_access">
   <div class="container d-flex flex-column text-center">
-    <h3 class="display-3 text-white"><i class="fas fa-trophy"></i> Succès débloqué !
+    <h3 class="display-3 text-success"><i class="fas fa-trophy"></i> Succès débloqué !
      <i class="fas fa-trophy"></i></h3>
     <div class="alert alert-success text-center" role="alert">
       Votre formulaire à bien été envoyé !
