@@ -70,7 +70,7 @@ Route::get('/admin/events/edit/{id}', [ 'uses' => 'EventsController@edit',
 ]);
 
 //UPDATE
-Route::get('/admin/events/edit/{id}', [ 'uses' => 'EventsController@edit',
+Route::post('/admin/events/update/{id}', [ 'uses' => 'EventsController@update',
                                         'middleware' => 'roles',
                                         'roles' => ['Admin']
 ]);
