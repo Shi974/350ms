@@ -1,24 +1,23 @@
 @extends('layouts.main')
 
 @section('content')
-
-<div class="d-flex text-center justify-content-around p-0 m-0">
-    <div>
-        <div id='nbTournois' class='odometer'>0</div>
-        <h3>Tournois organisés à la Réunion</h3>
+<div class="d-flex text-center justify-content-arround p-0 m-0">
+    <div class="col-sm">
+        <div id='nbTournois' class='odometer display-2'>0</div>
+        <h3>Tournoi organisés à la Réunion</h3>
+        <div class="underline"></div>
     </div>
-
-    <div >
-        <div id='nbgagant' class='odometer'>0</div>
-        <h3>Récompenses gagnées</h3>
+    <div class=" col-sm">
+        <div id='nbgagant' class='odometer display-2'>0</div>
+        <h3>Récompenses à gagner</h3>
+        <div class="underline"></div>
     </div>
-
-    <div>
-        <div id='nbParticipants' class='odometer'>0</div>
-        <h3>Joueurs participants</h3>
+    <div class=" col-sm">
+        <div id='nbParticipants' class='odometer display-2'>0</div>
+        <h3>Participants au 350ms Klub:</h3>
+        <div class="underline"></div>
     </div>
 </div>
-
 <div class="container">
     <div class="text-center text-justify">
         <h3>Welcome</h3>
@@ -51,5 +50,6 @@
                 nbgagant.innerHTML = 100;
             }, );
         }
+
     </script>
     @endsection
