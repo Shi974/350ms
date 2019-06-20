@@ -29,7 +29,7 @@ class SuggestionsController extends Controller
         $suggestion->message = $request->message;
         $suggestion->save();
         return view("validation");
-        //! Ne plas oublier de return vers une page validation du formulaire
+        //! Ne pas oublier de return vers une page validation du formulaire
     }
 
     // READ SUGGESTION -------------------------------

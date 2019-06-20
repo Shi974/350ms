@@ -13,8 +13,8 @@
     @csrf
     
     <div class="form-group">
-      <label for="jeu">Jeu</label>
-      <input name="jeu" type="text" class="form-control {{ $errors->has('jeu') ? ' bg-danger ' : ''}}" id="jeu" placeholder="Jeu">
+      <label for="jeu" title="Champ obligatoire">Jeu <span class="required">*</span></label>
+      <input name="jeu" type="text" class="form-control {{ $errors->has('jeu') ? ' bg-danger ' : ''}}" id="jeu" placeholder="Jeu" required>
     </div>
 
     @if ($errors->has('jeu'))<!--afficher l'erreur dans le formulaire-->
@@ -24,8 +24,8 @@
     @endif 
         
     <div class="form-group">
-      <label for="date">Date</label>
-      <input name="date" type="date" class="form-control" id="date" placeholder="Date">
+      <label for="date" title="Champ obligatoire">Date <span class="required">*</span></label>
+      <input name="date" type="date" class="form-control" id="date" placeholder="Date" required>
     </div>
 
     @if ($errors->has('date'))<!--afficher l'erreur dans le formulaire-->
@@ -35,8 +35,8 @@
     @endif 
 
     <div class="form-group">
-      <label for="lieu">Lieu</label>
-      <input name="lieu" type="text" class="form-control" id="lieu" placeholder="Lieu">
+      <label for="lieu" title="Champ obligatoire">Lieu <span class="required">*</span></label>
+      <input name="lieu" type="text" class="form-control" id="lieu" placeholder="Lieu" required>
     </div>
 
     @if ($errors->has('lieu'))<!--afficher l'erreur dans le formulaire-->
@@ -46,8 +46,8 @@
     @endif 
 
     <div class="form-group">
-      <label for="horaire_debut">Horaire</label>
-      <input name="horaire_debut" type="time" class="form-control" id="horaire_debut" placeholder="Horaire">
+      <label for="horaire_debut" title="Champ obligatoire">Horaire <span class="required">*</span></label>
+      <input name="horaire_debut" type="time" class="form-control" id="horaire_debut" placeholder="Horaire" required>
     </div>
 
     @if ($errors->has('horaire_debut'))<!--afficher l'erreur dans le formulaire-->
@@ -68,8 +68,8 @@
     @endif 
 
     <div class="form-group">
-      <label for="nb_place">Nombre de places</label>
-      <input name="nb_place" type="number" class="form-control" id="nb_place" placeholder="Nombre de places">
+      <label for="nb_place" title="Champ obligatoire">Nombre de places <span class="required">*</span></label>
+      <input name="nb_place" type="number" class="form-control" id="nb_place" placeholder="Nombre de places" required>
     </div>
 
     @if ($errors->has('nb_place'))<!--afficher l'erreur dans le formulaire-->

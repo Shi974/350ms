@@ -22,11 +22,11 @@
                     @csrf
                         <div class="form-group">
                             <label for="titre">Objet de la Suggestion</label>
-                            <input type="text" class="form-control" id="titre" name="titre">
+                            <input type="text" class="form-control" id="titre" name="titre" required>
                         </div>
                         <div class="formgroup">
                             <label for="message">Votre suggestion</label>
-                            <textarea class=form-control id="message" name="message"></textarea>
+                            <textarea class=form-control id="message" name="message" required></textarea>
                         </div>
                         <br />
                         @guest

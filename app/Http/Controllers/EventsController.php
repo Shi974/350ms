@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Evenement;
+use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class EventsController extends Controller
 {
@@ -21,7 +23,7 @@ class EventsController extends Controller
     public function store(Request $request) { 
         // dd($request->all()); 
 
-        $request->validate([  //validation côté serveur
+        $request->validate([
             'jeu'=>'required|max:255',
             'date'=> 'required',
             'horaire_debut'=> 'required',
@@ -84,7 +86,7 @@ class EventsController extends Controller
     // DELETE EVENTS
     public function destroy($id){
         //dd($id);
-        Event::where('id',$id)
+        Evenement::where('id',$id)
         ->delete();
 
         return redirect()->action("EventsController@indexAllEvents");
@@ -103,7 +105,22 @@ class EventsController extends Controller
         return view('idEvent', ['event'=>$event]);
     }
 
+    public function  inscri_event ($id){
+        $user = Auth::user()->id;
     
+        User::find($user)->evenements()->attach($id);
 
+        //dd(User::find($user));
 
+        return redirect()->action("EventsController@indexEvent");
+    }
+   
+
+    public function delete_event($id){
+        $user = Auth::user()->id;
+    
+        User::find($user)->evenements()->detach($id);
+        //dd($user);
+        return redirect()->action("EventsController@indexEvent");
+    }
 }
