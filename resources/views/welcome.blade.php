@@ -9,12 +9,12 @@
     </div>
     <div class=" col-sm">
         <div id='nbgagant' class='odometer display-2'>0</div>
-        <h3>Récompenses à gagner</h3>
+        <h3>Récompenses gagnées</h3>
         <div class="underline"></div>
     </div>
     <div class=" col-sm">
         <div id='nbParticipants' class='odometer display-2'>0</div>
-        <h3>Participants au 350ms Klub:</h3>
+        <h3>Inscriptions aux évènements 350ms Klub</h3>
         <div class="underline"></div>
     </div>
 </div>
