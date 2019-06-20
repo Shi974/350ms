@@ -123,4 +123,10 @@ class EventsController extends Controller
         //dd($user);
         return redirect()->action("EventsController@indexEvent");
     }
+
+    //
+    public function list_user(){
+        $events = Evenement::all();
+        return view('admin.list_users', ['events' => $events]);
+    }
 }

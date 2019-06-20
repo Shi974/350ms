@@ -46,7 +46,7 @@
 
             <div class="form-group ">
                 <label for="inputProduct">Téléphone</label>
-                <input type="text" class="form-control" id="inputplace" name="phone" value="{{$users->phone}}">
+                <input type="number" class="form-control" id="inputplace" name="phone" value="{{$users->phone}}">
             </div>
 
             @if($errors-> has('phone'))
