@@ -371,6 +371,19 @@ input {
         margin: 5px;
     }
 
+    #welcome .justify-content-around {
+        flex-direction: column !important;
+    }
+
+    #welcome .justify-content-around h3  {
+        font-size: 1.4em !important;
+    }
+
+    #welcome .odometer {
+        font-size: 2.2em !important;
+        margin-top: 5px;
+    }
+
     #events_users .flex-row {
         flex-direction: column !important;
         align-items: center !important;
@@ -379,5 +392,16 @@ input {
     article .btn { 
         width: 50%;
         margin-top: 5px !important;
+    }
+}
+
+/* RESPONSIVE H3 768px */
+@media all and (max-width: 768px) {
+    .jumbotron h3, .far {
+        font-size: 2em !important;
+    }
+
+    #events_users .far {
+        display: none !important;
     }
 }
