@@ -120,3 +120,5 @@ Route::get('/inscription/event/{id}', 'EventsController@inscri_event');
 Route::get('/inscription/delete/{id}', 'EventsController@delete_event');
 //! Fonction pour inscrire l'utilisateur dans un evenement
 
+//Lister les users dans les events
+Route::get('/admin/joueurs_events', 'EventsController@list_user');
