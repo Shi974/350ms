@@ -16,7 +16,7 @@
 
                             <div class="col-md-6">
                                 <input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror"
-                                    name="firstname" autofocus>
+                                    name="firstname" autofocus required />
 
                                 @error('firstname')
                                 <span class="invalid-feedback" role="alert">
