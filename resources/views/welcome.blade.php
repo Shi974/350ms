@@ -10,7 +10,7 @@
 
     <div >
         <div id='nbgagant' class='odometer'>0</div>
-            <h2>Seul gagant par Tournois !</h2>
+            <h2>Récompenses à gagner</h2>
     </div>
 
     <div>
@@ -60,7 +60,7 @@
             setTimeout(function () {
                 nbTournois.innerHTML = 149;
                 nbParticipants.innerHTML = 1342;
-                nbgagant.innerHTML = 1;
+                nbgagant.innerHTML = 100;
             }, );
         }
 
