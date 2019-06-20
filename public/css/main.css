@@ -166,6 +166,11 @@ img {
     font-size: 30px;
 }
 
+.liste{
+color:White !important;
+
+}
+
 footer {
     margin-top: 5vh !important;
     text-align: center;

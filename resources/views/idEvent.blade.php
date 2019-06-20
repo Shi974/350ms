@@ -4,7 +4,7 @@
 @section('content')
 
 
-<div clas="container" id="events_users">
+<div clas="container" id="events_id">
 
     <div class="text-center text-justify">
         <h3> Tournois {{ $event->jeu }} </h3>
@@ -28,7 +28,7 @@
                 Prix de participation: {{ $event->prix }}<br />
         </p>
         
-        <div class="d-flex justify-content-end">
+        <div class="text-center">
             <a href="idEvent/{{ $event->id }}" class="btn btn-outline-danger font-weight-bold"g
                 aria-label="Lire davantage sur ce sujet">
                 s'inscrire

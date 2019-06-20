@@ -6,7 +6,8 @@
 <div class="profil text-center">
 
     <h3>Page Profil de {{ $users->pseudo }}</h3>
-    <img src="/storage/{{ auth()->user()->avatar }}" alt="avatar">
+    <img src="/avatars/1.jpg" alt="avatar">
+    <!-- <img src="/avatars/{{ auth()->user()->avatar }}" alt="avatar"> -->
 
 </div>
 
@@ -17,15 +18,15 @@
 
         <div class="text-center">
             
-            <h4 class="font-weight-bold">Prenom :</h4> {{ $users->firstname }}
+            <h5 class="liste">Prenom :</h5> <h4 class="font-weight-bold"> {{ $users->firstname }}</h4>
 
-            <h4 class="font-weight-bold">Nom :</h4>{{ $users->lastname }}
+            <h5 class="liste">Nom :</h5> <h4 class="font-weight-bold">{{ $users->lastname }}</h4>
 
-            <h4 class="font-weight-bold">Email :</h4> {{ $users->email }}
+            <h5 class="liste">Email :</h5> <h4 class="font-weight-bold"> {{ $users->email }}</h4>
 
-            <h4 class="font-weight-bold">Téléphone : </h4>{{ $users->phone }}
+            <h5 class="liste">Téléphone : </h5> <h4 class="font-weight-bold">{{ $users->phone }}</h4>
 
-            <h4 class="font-weight-bold">Pseudo : </h4>{{ $users->pseudo }}
+            <h5 class="liste">Pseudo : </h5> <h4 class="font-weight-bold">{{ $users->pseudo }}</h4>
 
         </div>
 
