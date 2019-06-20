@@ -1,9 +1,10 @@
 @extends ('layouts.main')
 @section ('content')
 
-<div class="jumbotron bg-primary text-white rounded-0">
+<div class="jumbotron bg-primary rounded-0">
   <div class="container">
-    <h1 class="display-3">Modifier un évènement</h1>
+    <h1 class="text-white display-3">Modifier un évènement</h1>
+    <p class="text-white"><span class="required">*</span> = champ obligatoire</p>
   </div>
 </div>
 
@@ -13,9 +14,9 @@
     @csrf
     
     <div class="form-group">
-      <label for="jeu">Jeu</label>
+      <label for="jeu" title="Champ obligatoire">Jeu <span class="required">*</span></label>
       <input name="jeu" type="text" class="form-control {{ $errors->has('jeu') ? ' bg-danger ' : ''}}" id="jeu" 
-      placeholder="Jeu" value="{{ $event->jeu }}">
+      placeholder="Jeu" value="{{ $event->jeu }}" required>
     </div>
 
     @if ($errors->has('jeu'))<!--afficher l'erreur dans le formulaire-->
@@ -25,7 +26,7 @@
     @endif 
         
     <div class="form-group">
-      <label for="date">Date</label>
+      <label for="date" title="Champ obligatoire">Date <span class="required">*</span></label>
       <input name="date" type="date" class="form-control" id="date" placeholder="Date" value="{{ $event->date }}">
     </div>
 
@@ -36,7 +37,7 @@
     @endif 
 
     <div class="form-group">
-      <label for="lieu">Lieu</label>
+      <label for="lieu" title="Champ obligatoire">Lieu <span class="required">*</span></label>
       <input name="lieu" type="text" class="form-control" id="lieu" placeholder="Lieu" value="{{ $event->lieu }}">
     </div>
 
@@ -47,7 +48,7 @@
     @endif 
 
     <div class="form-group">
-      <label for="horaire_debut">Horaire</label>
+      <label for="horaire_debut" title="Champ obligatoire">Horaire <span class="required">*</span></label>
       <input name="horaire_debut" type="time" class="form-control" id="horaire_debut" 
       placeholder="Horaire" value="{{ $event->horaire_debut }}">
     </div>
@@ -70,7 +71,7 @@
     @endif 
 
     <div class="form-group">
-      <label for="nb_place">Nombre de places</label>
+      <label for="nb_place" title="Champ obligatoire">Nombre de places <span class="required">*</span></label>
       <input name="nb_place" type="number" class="form-control" id="nb_place" placeholder="Nombre de places"
       value="{{ $event->nb_place }}">
     </div>
@@ -131,7 +132,8 @@
 
     <div class="form-group">
       <label for="image">Image</label> <span class="facultatif">champ facultatif</span> <br/>
-      > <input name="image" type="file" id="image" accept="image/png, image/jpeg" value="{{ $event->image }}">
+      > <input name="image" type="file" id="image" accept="image/png, image/jpeg" value="{{ $event->image }}"
+       disabled />
     </div>
 
     @if ($errors->has('image'))<!--afficher l'erreur dans le formulaire-->

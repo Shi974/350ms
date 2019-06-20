@@ -3,7 +3,8 @@
 
 <div class="jumbotron bg-primary text-white rounded-0">
   <div class="container">
-    <h1 class="display-3">Ajout d'un nouvel évènement</h1>
+    <h1 class="text-white display-3">Création d'un évènement</h1>
+    <p class="text-white"><span class="required">*</span> = champ obligatoire</p>
   </div>
 </div>
 
@@ -14,7 +15,8 @@
     
     <div class="form-group">
       <label for="jeu" title="Champ obligatoire">Jeu <span class="required">*</span></label>
-      <input name="jeu" type="text" class="form-control {{ $errors->has('jeu') ? ' bg-danger ' : ''}}" id="jeu" placeholder="Jeu" required>
+      <input name="jeu" type="text" class="form-control {{ $errors->has('jeu') ? ' bg-danger ' : ''}}" 
+        id="jeu" placeholder="Jeu" required />
     </div>
 
     @if ($errors->has('jeu'))<!--afficher l'erreur dans le formulaire-->
@@ -124,7 +126,7 @@
 
     <div class="form-group">
       <label for="image">Image</label> <span class="facultatif">champ facultatif</span> <br/>
-      > <input name="image" type="file" id="image" accept="image/png, image/jpeg">
+      > <input name="image" type="file" id="image" accept="image/png, image/jpeg" disabled />
     </div>
 
     @if ($errors->has('image'))<!--afficher l'erreur dans le formulaire-->
