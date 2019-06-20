@@ -10,11 +10,8 @@
 </div>
 
 
-<div class="container row d-flex justify-content-around align-items-center">
+<div class="col-12 md-flex justify-content-center ">
 
-    <div class="contenu">
-
-        <div class="text-center">
             
             <h5 class="liste">Prenom :</h5> <h4 class="font-weight-bold"> {{ $users->firstname }}</h4>
 
