@@ -28,6 +28,7 @@ class SuggestionsController extends Controller
         $suggestion->user_id = $auth;    //* On place l'id dans le user_id
         $suggestion->message = $request->message;
         $suggestion->save();
+        return view("validation");
         //! Ne plas oublier de return vers une page validation du formulaire
     }
 
