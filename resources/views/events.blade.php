@@ -14,10 +14,10 @@
             <article aria-label="article {{$event->jeu}}" class=" card border-light p-3 mb-5 rounded">
                 <h4 class="text-center" aria-label="">{{ $event->jeu }}</h4>
 
-                <div class="d-flex flex-row justify-content-aroun w-100">
+                <div class="d-flex flex-row justify-content-around w-100">
 
                 
-                    <figure style="width:20%" class="w-25">
+                    <figure>
                         <img src="/images/{{ $event->image }}" alt="Jaquette de {{ $event->jeu }}" 
                         title="Jaquette de {{ $event->jeu }}"/>
                     </figure>
