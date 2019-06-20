@@ -26,20 +26,9 @@
     <div class="intro text-justify">
 
         <h4>Qui sont les GDK ? </h4>
-        <p>Hinc ille commotus ut iniusta perferens et indigna praefecti custodiam protectoribus mandaverat fidis.
-            quo conperto Montius tunc quaestor acer quidem sed ad lenitatem propensior. </p>
+        <p>GDK (Gamers Da Kour) est une jeune association qui a pour objectif la mise en place de tournois de e-sports aussi bien en ligne qu’en local.Nous aspirons à toucher la plus grande communauté possible en étant présent sur les réseaux sociaux et en ayant un site internet attractif. L’e-sport c’est quoi ? L’esport désigne l’ensemble des pratiques permettant à des joueurs de confronter leur niveau par l’intermédiaire d’un support électronique, et essentiellement le jeu vidéo, et ce quel que soit le type de jeu ou la plateforme (ordinateur, console ou tablette). </p>
 
-        <p> consulens in commune advocatos palatinarum primos scholarum adlocutus est mollius docens nec decere haec
-            fieri nec prodesse </p>
-
-        <p> addensque vocis obiurgatorio sonu quod si id placeret, post statuas Constantii deiectas super adimenda
-            vita praefecto conveniet securius cogitari.</p>
-
-        <p>Accedebant enim eius asperitati, ubi inminuta vel laesa amplitudo imperii dicebatur, et iracundae
-            suspicionum quantitati proximorum cruentae blanditiae exaggerantium incidentia et dolere inpendio</p>
-
-        <p> simulantium, si principis periclitetur vita, a cuius salute velut filo pendere statum orbis terrarum
-            fictis vocibus exclamabant.</p>
+       
     </div>
     <script src='http://github.hubspot.com/odometer/odometer.js'></script>
     <script>
