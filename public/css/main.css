@@ -371,6 +371,19 @@ input {
         margin: 5px;
     }
 
+    #welcome .justify-content-around {
+        flex-direction: column !important;
+    }
+
+    #welcome .justify-content-around h3, .odometer {
+        font-size: 20px !important;
+    }
+
+    #welcome .justify-content-around .odometer {
+        font-size: 25px !important;
+    }
+
+
     #events_users .flex-row {
         flex-direction: column !important;
         align-items: center !important;
