@@ -45,7 +45,8 @@
                         Se Désinscrire
                     </a> -->
                     <!-- -------- -->
-                    <a href="/events/details/{{$event->id}}" class="btn btn-outline-success font-weight-bold mt-2" aria-label="Lire davantage sur ce sujet">
+                    <a href="/events/details/{{$event->id}}" class="btn btn-outline-success font-weight-bold mt-2" 
+                    aria-label="Lire davantage sur l'évènement {{ $event->jeu }}" title="Lire davantage sur l'évènement {{ $event->jeu }}">
                         En savoir plus
                     </a>
                 </div>
