@@ -18,8 +18,8 @@
 
                 
                     <figure style="width:20%" class="w-25">
-                        <img src="/images/{{ $event->image }}" alt="Jaquette de {{ $event->image }}" 
-                        title="Jaquette de {{ $event->image }}"/>
+                        <img src="/images/{{ $event->image }}" alt="Jaquette de {{ $event->jeu }}" 
+                        title="Jaquette de {{ $event->jeu }}"/>
                     </figure>
 
 

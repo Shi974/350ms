@@ -3,15 +3,15 @@
 
 <div class="jumbotron bg-primary text-white rounded-0">
     <div class="container">
-        <h1 class="display-3">Evènements</h1>
-        <p>Gestion des évènements.<p>
+        <h1 class="display-3 text-white">Evènements</h1>
+        <p>Créer, modifier, supprimer les évènements.<p>
     </div>
 </div>
 
 <hr>
 
 <div class="container-fluid">
-<span>Il y actuellement {{ count($events) }} @if (count($events) > 1)évènements @else évènement @endif dans la base de données.</span>
+<span class="text-white">Il y actuellement {{ count($events) }} @if (count($events) > 1)évènements @else évènement @endif dans la base de données.</span>
 <hr>
     <table class="table table-bordered table-dark">
         <thead class="text-center">

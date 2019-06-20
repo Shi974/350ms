@@ -9,7 +9,7 @@
     <table class="table table-bordered table-dark">
         <thead class="text-center">
             <tr>
-                <th scope="col">ID</th>
+                <!-- <th scope="col">ID</th> -->
                 <th scope="col">Auteur</th>
                 <th scope="col">Titre</th>
                 <th scope="col">Message</th>
@@ -19,7 +19,7 @@
         <tbody>
             @foreach($suggestions as $suggestion)
                 <tr>
-                    <th scope="row">{{ $suggestion->id}}</th>
+                    <!-- <th scope="row">{{ $suggestion->id}}</th> -->
                     <td class="text-center"> {{$suggestion->user->firstname }} </td>
                     <td class="text-center"> {{$suggestion->titre }} </td>
                     <td class="text-center"> {{$suggestion->message}} </td>

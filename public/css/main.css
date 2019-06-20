@@ -216,6 +216,12 @@ footer {
 }
 
 /* UTILISÉS LORS DES FORMULAIRES */
+.required {
+    color: red;
+    font-weight: bold !important;
+    font-size: 1.2rem !important;
+}
+
 .facultatif {
     color: grey !important;
     font-style: italic;

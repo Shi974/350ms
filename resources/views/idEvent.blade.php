@@ -11,7 +11,8 @@
 
     <div class="container d-flex flex-column text-center align-content-center">
         <div class="d-flex row justify-content-between">
-            <img src="/images/{{ $event->image }}" alt="Jaquette de {{ $event->image }}" title="" class="events_image"/>
+            <img src="/images/{{ $event->image }}" alt="Jaquette de {{ $event->jeu }}" 
+            title="Jaquette de {{ $event->jeu }}" class="events_image"/>
             <p>
                 <strong class="strong mt-5">Date</strong> : <span>{{ $event->date }}</span> <br />
                 <strong>Lieu</strong> : <span>{{ $event->lieu }}</span> <br />
@@ -32,7 +33,8 @@
         </p>
         
         <div class="d-flex justify-content-center">
-            <a href="idEvent/{{ $event->id }}" class="btn btn-outline-danger font-weight-bold" aria-label="Lire davantage sur ce sujet">
+            <a href="idEvent/{{ $event->id }}" class="btn btn-outline-success font-weight-bold" 
+            aria-label="Lire davantage sur ce sujet">
                 S'inscrire
             </a>
         </div>
