@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\User;
 use App\Role;
-use DB;
+
 
 
 class ProfilController extends Controller
@@ -28,7 +28,7 @@ class ProfilController extends Controller
       
     public function update($id,Request $request ) //fonction pour maj profil user
     { 
-      // dd($request-> all());
+      
 
 
      $users= $request -> all();
@@ -36,14 +36,13 @@ class ProfilController extends Controller
        $request->validate ([
         "firstname" => 'required',
         "lastname" => 'required',        
-        "age" => 'required',
         "email" => 'required',
         "phone" => 'required',
         "pseudo" => 'required']);
         
           User::where('id', $id)->update([
-            'firstname' => $request->prenom,
-        'lastname' => $request->nom,
+        'firstname' => $request->firstname,
+        'lastname' => $request->lastname,
         'email' => $request->email,
         'phone' => $request->phone,
         'pseudo' => $request->pseudo]);
@@ -58,6 +57,7 @@ class ProfilController extends Controller
 
             'avatar' => ['required', 'image']
         ]);
+
 
     $path = request('avatar')->store('avatars', 'public');
 

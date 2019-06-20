@@ -15,9 +15,9 @@ class SuggestionsTableSeeder extends Seeder
         //
         $suggestion = new Suggestion;
         $suggestion->id = 1;
-        $suggestion->user_id = 1;
-        $suggestion->titre = "Titre du message";
-        $suggestion->message = "Je suis un message. Bip bip Boop BooOp Bo0p !";
+        $suggestion->user_id = 2;
+        $suggestion->titre = "Final Fantasy XIV";
+        $suggestion->message = "Hello ! J'aimerais trop qu'on puisse organiser un tournoi de PVP sur FF14 ! Monde Louisoix sur le serveur Light! Merci";
         $suggestion->save();
     }
 }

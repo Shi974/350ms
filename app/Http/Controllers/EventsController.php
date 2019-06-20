@@ -23,7 +23,7 @@ class EventsController extends Controller
     public function store(Request $request) { 
         // dd($request->all()); 
 
-        $request->validate([  //validation côté serveur
+        $request->validate([
             'jeu'=>'required|max:255',
             'date'=> 'required',
             'horaire_debut'=> 'required',
@@ -86,7 +86,7 @@ class EventsController extends Controller
     // DELETE EVENTS
     public function destroy($id){
         //dd($id);
-        Event::where('id',$id)
+        Evenement::where('id',$id)
         ->delete();
 
         return redirect()->action("EventsController@indexAllEvents");

@@ -29,14 +29,14 @@ class SuggestionsController extends Controller
         $suggestion->message = $request->message;
         $suggestion->save();
         return view("validation");
-        //! Ne plas oublier de return vers une page validation du formulaire
+        //! Ne pas oublier de return vers une page validation du formulaire
     }
 
     // READ SUGGESTION -------------------------------
     public function read() {
         //d(Suggestion::get());
         $suggestions = Suggestion::get();
-        return view("suggestions",["suggestions"=> $suggestions]);
+        return view("admin.suggestions",["suggestions"=> $suggestions]);
     }
 
     // DESTROY SUGGESTION -----------------------------
