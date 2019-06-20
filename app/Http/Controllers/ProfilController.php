@@ -58,6 +58,7 @@ class ProfilController extends Controller
             'avatar' => ['required', 'image']
         ]);
 
+
     $path = request('avatar')->store('avatars', 'public');
 
             auth()->user()->update([

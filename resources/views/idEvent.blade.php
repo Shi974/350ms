@@ -2,7 +2,8 @@
 
 @section('content')
 
-<div clas="container" id="event_id">
+
+<div clas="container" id="events_id">
 
     <div class="text-center text-justify">
         <h3> Tournoi {{ $event->jeu }} </h3>
@@ -31,7 +32,7 @@
                 <strong>Tarif d'entrée</strong> :  <span>@if( $event->prix == null) aucun @else {{ $event->prix }} @endif</span> <br />
         </p>
         
-        <div class="d-flex justify-content-end">
+        <div class="text-center">
             <a href="idEvent/{{ $event->id }}" class="btn btn-outline-danger font-weight-bold"g
                 aria-label="Lire davantage sur ce sujet">
                 s'inscrire
