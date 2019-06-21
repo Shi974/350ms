@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Evenement;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 class EventsController extends Controller
 {
@@ -95,7 +96,18 @@ class EventsController extends Controller
     //RETRIEVE DE TOUS LES EVENTS - USERS
     public function indexEvent() {
         $events = Evenement::all();
-        return view('events', ['events' => $events]);
+        if (auth()->check()) {
+        $user = User::find(Auth::user()->id);
+        $a = DB::table("evenement_user")->where("user_id", $user->id)->get();
+        } else {
+            $user = "";
+            $a = "";
+        }
+
+        
+        
+
+        return view('events', ['events' => $events, "user"=>$user, "a"=>$a]);
     }
 
 

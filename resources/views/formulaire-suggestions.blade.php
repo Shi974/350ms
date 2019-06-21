@@ -31,7 +31,7 @@
                         <br />
                         @guest
                             <button type="submit" class="btn btn-secondary mr-4" disabled data-toggle="tooltip" 
-                            data-placement="top" title="Veuillez vous connecter pour accéder au panier">
+                            data-placement="top" title="Veuillez vous connecter pour envoyer votre message">
                                 Envoyer
                             </button>
                         @endguest
