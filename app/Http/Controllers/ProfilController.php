@@ -34,11 +34,11 @@ class ProfilController extends Controller
      $users= $request -> all();
 
        $request->validate ([
-        "firstname" => 'required',
-        "lastname" => 'required',        
-        "email" => 'required',
-        "phone" => 'required',
-        "pseudo" => 'required']);
+        "firstname" => 'required|max:255',
+        "lastname" => 'required|max:255',        
+        "email" => 'required|email',
+        "phone" => 'required|max:10',
+        "pseudo" => 'required|string']);
         
           User::where('id', $id)->update([
         'firstname' => $request->firstname,
