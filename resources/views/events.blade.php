@@ -19,20 +19,22 @@
             @foreach($events as $event)
             <article aria-label="article {{$event->jeu}}" class=" card border-light p-3 mb-5 rounded">
                 <h4 class="text-center" aria-label="">{{ $event->jeu }}
-                    <!-- Si Inscrit -->
-                    <!-- <p class="card-text"><small class="text-success">Vous êtes inscrit à cet évènement <i class="fas fa-check"></i></small></p> -->
-                    <!-- -------- -->
+                @auth
+                        <!--  -->
+                        @foreach($a as $b)
+                        @if($b->evenement_id == $event->id)
+                            <p class="card-text"><small class="text-success">Vous êtes inscrit à cet évènement <i class="fas fa-check"></i></small></p>
+                        @endif
+                        @endforeach
+                        <!-- -------- -->
+                @endauth
                 </h4>
-
                 <div class="d-flex flex-row justify-content-around w-100">
 
-                
                     <figure>
                         <img src="/images/{{ $event->image }}" alt="Jaquette de {{ $event->jeu }}" 
                         title="Jaquette de {{ $event->jeu }}"/>
                     </figure>
-
-
                     <span class="w-75">
                         Horaire : {{$event->horaire_debut}} <br />
                         Lieu : {{ $event->lieu}} <br />
@@ -41,9 +43,15 @@
                 </div>
                 <div class="d-flex justify-content-around">
                     <!-- Si Inscrit -->
-                    <!-- <a href="/inscription/delete/{{$event->id}}" class="btn btn-outline-danger font-weight-bold" aria-label="Lire davantage sur ce sujet">
-                        Se Désinscrire
-                    </a> -->
+                    @auth
+                    @foreach($a as $b)
+                        @if($b->evenement_id == $event->id)
+                        <a href="/inscription/delete/{{$event->id}}" class="btn btn-outline-danger font-weight-bold" aria-label="Lire davantage sur ce sujet">
+                            Se Désinscrire
+                        </a> 
+                        @endif
+                        @endforeach
+                    @endauth
                     <!-- -------- -->
                     <a href="/events/details/{{$event->id}}" class="btn btn-outline-success font-weight-bold mt-2" 
                     aria-label="Lire davantage sur l'évènement {{ $event->jeu }}" title="Lire davantage sur l'évènement {{ $event->jeu }}">
