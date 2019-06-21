@@ -39,16 +39,6 @@
             que soit le type de jeu ou la plateforme (ordinateur, console ou tablette). </p>
         
         </div>
-        <script src='http://github.hubspot.com/odometer/odometer.js'></script>
-        <script>
-            function myFunction() {
-                setTimeout(function () {
-                    nbTournois.innerHTML = 149;
-                    nbParticipants.innerHTML = 1342;
-                    nbgagant.innerHTML = 100;
-                }, );
-            }
-        </script>
     </div>
 
     <div id="carousel" class="carousel slide" data-ride="carousel">
